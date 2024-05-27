@@ -3,14 +3,14 @@ Al momento l'idea è quella di una landing page per l'evento
 ---
 ## Descrizione:
 Landing page con una bella foto di una macchina in primo piano.
-Dietro la scritta (1966 (?) -> 2024) (la scritta si trasforma dopo il caricamento del DOM)
-Scorrendo verso il basso troviamo sezione di descrizione dell'evento, quindi:
- giorno1 : musica cibi esibizioni
- giorno2 : musica cibi esibizioni
- giorno3 : musica cibi esibizioni
-Data e luogo (countdown???)(mappa???)
-Contatti ? modulo contatti ? 
-Sponsor obbligatorio nel footer
+<br>Dietro la scritta (1966 (?) -> 2024) (la scritta si trasforma dopo il caricamento del DOM)
+<br>Scorrendo verso il basso troviamo sezione di descrizione dell'evento, quindi:
+ <br>giorno1 : musica cibi esibizioni
+ <br>giorno2 : musica cibi esibizioni
+ <br>giorno3 : musica cibi esibizioni
+<br>Data e luogo (countdown???)(mappa???)
+<br>Contatti ? modulo contatti ? 
+<br>Sponsor obbligatorio nel footer
 
 
 ### Linguaggi, librerie e framework utilizzati:
@@ -21,7 +21,6 @@ Sponsor obbligatorio nel footer
 ---
 ### Proprietà:
 - Alessandro Paolantonio
-- Alessandro Nardi
 ---
 ### Istruzioni installazione:
 > installazione di XAMPP e PostgreSQL
