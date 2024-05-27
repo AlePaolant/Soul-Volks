@@ -5,9 +5,9 @@ Al momento l'idea è quella di una landing page per l'evento
 Landing page con una bella foto di una macchina in primo piano.
 Dietro la scritta (1966 (?) -> 2024) (la scritta si trasforma dopo il caricamento del DOM)
 Scorrendo verso il basso troviamo sezione di descrizione dell'evento, quindi:
-- giorno1 : musica cibi esibizioni
-- giorno2 : musica cibi esibizioni
-- giorno3 : musica cibi esibizioni
+ giorno1 : musica cibi esibizioni
+ giorno2 : musica cibi esibizioni
+ giorno3 : musica cibi esibizioni
 Data e luogo (countdown???)(mappa???)
 Contatti ? modulo contatti ? 
 Sponsor obbligatorio nel footer
