@@ -22,6 +22,22 @@ Landing page con una bella foto di una macchina in primo piano.
 ### Proprietà:
 - Alessandro Paolantonio
 ---
+### Server:
+- Aruba Hosting Easy Linux
+- SiteGround GrowBig
+---
+### Implementazioni da effettuare post coding:
+- Aggiornamenti Server e database regolari -> effettuati da Aruba
+- Firewall e misure di sicurezza del server a livello di rete
+- Certificati SSL/TLS -> strumenti per criptare connessione client-server
+#### Intervento utente:
+- Validazione dell'Input e Sanitizzazione (prevenire attacchi come SQL Injection e XSS)
+- Gestione delle sessioni e dei cookies
+- Configurazione dei firewall del server (configurare manualmente le regole del firewall per limitare l'accesso alle porte necessarie e bloccare le richieste sospette)
+- Policy di Sicurezza (definire e implementare le policy di sicurezza per le password, l'accesso agli account e le procedure di backup)
+- Auditing e Monitoraggio (strumenti di monitoraggio e log per individuare attività sospette)
+- Gestione delle vulnerabilità (applicare patch di sicurezza)
+---
 ### Istruzioni installazione:
 > installazione di XAMPP e PostgreSQL
 
