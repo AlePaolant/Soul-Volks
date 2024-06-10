@@ -12,7 +12,15 @@ Landing page con una bella foto di una macchina in primo piano.
 <br>Contatti ? modulo contatti ? 
 <br>Sponsor obbligatorio nel footer
 
-
+### OTTIMIZZAZIONE SEO di Base:
+- ricerca e selezione delle parole chiave
+- ottimizzazione meta tag
+- velocità nel caricamento del sito
+- comportamento CACHE
+- sitemap (crawler?) -> google search console (ma apple/safari?)
+- robots.txt
+- Google Analytics
+---
 ### Linguaggi, librerie e framework utilizzati:
 - HTML, CSS, JavaScript
 - Bootstrap, JQuery
@@ -20,7 +28,7 @@ Landing page con una bella foto di una macchina in primo piano.
 - AJAX
 ---
 ### Proprietà:
-- Alessandro Paolantonio
+- Alessandro Paolantonio, Soul Volks
 ---
 ### Server:
 - Aruba Hosting Easy Linux
@@ -62,6 +70,10 @@ Download XAMPP da [qui](https://www.apachefriends.org/it/download.html)
 ![Idea UI](idea1.gif)
 ![Idea UI](epoca.jpg)
 ![Idea UI](telefono.jpg)
+
+---
+### Robots.txt
+ho creato una cartella private in directory root, che può contenere informazioni private a cui i client non possono accedere a meno di autorizzazioni ftp
 
 ---
 ### Possibili sviluppi:

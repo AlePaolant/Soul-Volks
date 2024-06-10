@@ -1,0 +1,34 @@
+TITOLO:
+serve un titolo diverso per ogni pagina
+- index -> home
+- evento -> eventi / nome evento
+- contatti -> contatti
+
+DESCRIZIONE:
+- Lunghezza: mantenere la descrizione tra 150 e 160 caratteri.
+- Chiarezza: la descrizione deve essere chiara e deve descrivere esattamente di cosa tratta il sito o la pagina.
+- Parole Chiave: includere le parole chiave principali senza forzarle, mantenendo la descrizione naturale e leggibile.
+- Invito all'Azione: includere un invito all'azione per incentivare l'utente a visitare il sito o partecipare all'evento.
+
+
+gen by ChatGPT:
+
+Soul Volks è il club Volkswagen d'epoca in Molise. 
+Unisciti a noi per eventi e raduni di Maggiolini, pulmini T1 e altre Volkswagen classiche. 
+Scopri il nostro prossimo evento, il Matese Volks Camp.
+
+Benvenuti in Soul Volks, il club Volkswagen d'epoca del Molise. 
+Partecipate ai nostri raduni di Maggiolini e T1 e unitevi alla nostra comunità di appassionati di auto storiche.
+
+Scopri Soul Volks, il club per gli amanti delle Volkswagen d'epoca in Molise. 
+Partecipa ai nostri eventi esclusivi, inclusi raduni di Maggiolini e pulmini T1.
+
+Partecipa al Soul Volks Camp nel Matese! Raduno annuale per appassionati di Volkswagen d'epoca. 
+Un weekend tra Maggiolini e T1 nella splendida cornice del Molise. Iscriviti ora!
+
+Non perdere il Matese Volks Camp! Raduno di Volkswagen d'epoca nel cuore del Molise. 
+Maggiolini, T1 e tante altre VW classiche ti aspettano per un evento indimenticabile.
+
+Unisciti a noi al Soul Volks Camp nel Matese. Raduno annuale di Volkswagen d'epoca con Maggiolini e T1. 
+Vivi l'esperienza unica del nostro evento in Molise.
+

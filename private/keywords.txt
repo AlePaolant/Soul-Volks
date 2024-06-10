@@ -1,0 +1,62 @@
+## utilizzo google keyword planner -> tramite google ads, quindi deve essere fatto da mail amministratore
+
+1. Definizione Obiettivo
+2. Definizione Pubblico target
+3. Analisi parole chiave concorrenti (es. siti che escono quando cerco il mio)+
+4. Identificazione parole chiave a coda lunga
+5. Classificazione intenzioni di ricerca (informativa,navigazionale,commerciale,transazionale)
+6. Elenco parole chiave
+7. Valuta competitività delle parole chiave
+8. Analisi e scelta delle parole finali
+9. Monitora e aggiorna periodicamente le parole chiave finali (es 1 volta x anno, idealmente + di una)
+
+
+
+- assicurati che ogni pagina abbia i titoli, meta descrizioni e tag H1 che includano le parole chiave principali
+- utilizza parole chiave nei nomi dei file e negli attributi alt delle immagini. Ad esempio, "maggiolino-volkswagen-epoca-raduno-molise.jpg"
+
+--------------------------------------------------------------------------------------------------------
+### Parole Chiave Generali:
+Club Volkswagen d'epoca Italia
+Club auto d'epoca Molise
+Club Volkswagen Maggiolino
+Club Volkswagen Maggiolino
+Club Volkswagen T1
+Raduni Volkswagen d'epoca
+Incontri Volkswagen d'epoca Italia
+Raduni auto d'epoca
+Volkswagen 
+---------------------------------------
+
+### Parole Chiave per il Raduno:
+Soul Volks Camp
+Matese Volks Camp
+Campitello Matese
+Raduno Maggiolone Molise
+Raduno Maggiolini Molise
+Raduno Volkswagen Molise
+Raduno Volkswagen d'epoca Molise
+Raduno Volkswagen T1 Italia
+Incontro Volkswagen d'epoca Molise
+Evento auto d'epoca Molise 
+Raduno Campitello Matese
+Raduno Soul Volks
+---------------------------------------
+
+### Parole Chiave Locali
+Club auto d'epoca Campobasso
+Raduno Volkswagen Molise 2024
+Eventi auto d'epoca Molise 
+Volkswagen d'epoca Molise
+Volkswagen club Campobasso
+---------------------------------------
+
+### Parole Chiave a Coda lunga
+iscrizione club Volkswagen d'epoca Molise
+Partecipazione raduno Volkswagen d'epoca Campitello Matese
+Raduno annuale Volkswagen Molise
+Calendario eventi Wolkswagen d'epca Italia
+Volkswagen club Molise
+Partecipazione Soul Volks Camp
+Partecipazione Matese Volks Camp
+Evento Volkswagen d'epoca Campitello Matese
