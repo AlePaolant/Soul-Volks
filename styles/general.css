@@ -68,7 +68,7 @@ a {
     font-size: 1rem;
     font-weight: 300;
     font-style: normal;
-    line-height: 1.3;
+    line-height: 1.1;
     color: #987b65;
 }
 a:hover {
@@ -259,8 +259,6 @@ a:hover {
 }
 
 .footer a {
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     color: #ebe9e4;
@@ -271,10 +269,6 @@ a:hover {
 }
 
 .footer .footer-heading {
-    font-family: "Cormorant Garamond", serif;
-    font-weight: 700;
-    font-size: 20px;
-    letter-spacing: .05em;
     text-transform: uppercase;
     color: #ebe9e4
 }
