@@ -1,0 +1,316 @@
+/*GENERAL*/
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+::selection {
+    background-color: rgba(126, 93, 71, 0.7);
+}
+html {
+    overflow-x: hidden;
+}
+body {
+    background-color: #ebe9e4;
+    font-family: "Poppins", sans-serif;
+}
+h1 {
+    font-family: "Poppins", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 3.7rem;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.3;
+    color: #212222;
+}
+h2 {
+    font-family: "Poppins", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 2.8rem;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.3;
+    color: #212222;
+}
+h3 {
+    font-family: "Poppins", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 1.88rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.3;
+    color: #212222;
+}
+h4 {
+    font-family: "Poppins", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 1.25rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.3;
+    color: #212222;
+}
+p {
+    font-family: "Poppins", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 1rem;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.3;
+    color: #212222;
+}
+a {
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    font-optical-sizing: auto;
+    font-size: 1rem;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.3;
+    color: #987b65;
+}
+a:hover {
+    color: #ebe9e4;
+}
+
+
+
+
+
+
+
+
+/*NAVBAR*/
+.navbar {
+    background: transparent !important;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+@media screen and (max-width: 991px) {
+    .navbar {
+        background: #A58E76 !important;
+        top: 0;
+        position: relative;
+    }
+}
+
+.container-navbar {
+    margin-left: 20px;
+}
+
+.navbar .navbar-nav>.nav-item>.nav-link {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    transition: background-color 0.3s;
+    color: #000000 !important;
+}
+
+.navbar .navbar-nav>.nav-item>.nav-link:hover {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #7E5E47 !important;
+}
+
+.navbar.scrolled .navbar-nav>.nav-item>.nav-link:hover {
+    color: #ebe9e4 !important;
+}
+
+@media screen and (max-width: 960px) {
+    .navbar .navbar-nav>.nav-item>.nav-link {
+        padding-top: 10px;
+        padding-bottom: 6px;
+        padding-left: 0px;
+        padding-right: 0px;
+        color: #000000 !important;
+    }
+}
+
+.navbar .navbar-toggler {
+    border: none;
+    color: rgba(167, 167, 167, 0.5) !important;
+    cursor: pointer;
+    padding-right: 0;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: .1em;
+}
+
+/*tutto sto casino serve a togliere il bordino all'hamburger menu:*/
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.navbar.scrolled {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    margin-top: -130px;
+    background: #C7B8A3 !important;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar.scrolled .navbar-nav {
+        background: none;
+        border-radius: 0px;
+        padding-left: 0rem !important;
+        padding-right: 0rem !important;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .navbar.scrolled .navbar-nav {
+        background: none;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
+.navbar.scrolled .navbar-toggler {
+    border: none;
+    color: rgba(0, 0, 0, 0.5) !important;
+    border-color: rgba(0, 0, 0, 0.5) !important;
+    cursor: pointer;
+    padding-right: 0;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: .1em;
+}
+
+.navbar.scrolled .nav-link {
+    padding-top: 0.7rem !important;
+    padding-bottom: 0.7rem !important;
+    color: #000000 !important;
+}
+
+.navbar.scrolled.mostra {
+    margin-top: 0px;
+    -webkit-transition: .3s all ease-out;
+    -o-transition: .3s all ease-out;
+    transition: .3s all ease-out;
+}
+
+.navbar.scrolled.nascondi {
+    -webkit-transition: .3s all ease-out;
+    -o-transition: .3s all ease-out;
+    transition: .3s all ease-out;
+}
+
+#logo-bianco,
+#logo-nero {
+    width: 250px;
+}
+
+@media screen and (max-width: 991) {
+
+    #logo-bianco,
+    #logo-nero {
+        width: 150px;
+    }
+}
+
+.logo-bianco {
+    display: none;
+}
+
+.navbar.scrolled .logo-bianco {
+    display: block;
+}
+
+.navbar-nav.ml-auto {
+    align-content: end;
+    margin-right: 20px;
+    margin-left: auto !important;
+}
+
+
+
+
+/*FOOTER*/
+.footer {
+    height: auto;
+    /* Altezza del footer */
+    padding: 7em 0 7em 0;
+    background: #212222;
+    min-height: 250px;
+    position: relative;
+}
+
+.footer-logo {
+    width: 70%;
+}
+
+.footer p {
+    color: #ebe9e4;
+}
+
+.footer a {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: #ebe9e4;
+}
+
+.footer a:hover {
+    color: #987b65;
+}
+
+.footer .footer-heading {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    color: #ebe9e4
+}
+
+.footer-social li {
+    list-style: none;
+    margin: 0 10px 10px 0;
+    display: inline-block;
+}
+
+.footer-social li a {
+    height: 60px;
+    width: 60px;
+    display: block;
+    float: left;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    position: relative;
+}
+
+.footer-social li a span {
+    position: absolute;
+    font-size: 26px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.footer-social li a:hover {
+    color: #987b65;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-logo {
+        width: 25%;
+    }
+}
