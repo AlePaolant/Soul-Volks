@@ -1,15 +1,23 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const letters = document.querySelectorAll('.letter');
-    const delay = 2000; // 2 secondi di ritardo prima di iniziare l'animazione
-    const fillDelay = 300; // Ritardo tra il riempimento di ogni lettera
+document.addEventListener('DOMContentLoaded', function() {
+    const textSoul = document.querySelector('.text-soul');
+    const textVolks = document.querySelector('.text-volks');
+    const VWClub = document.querySelector('.vw-club');
+    const est2023 = document.querySelector('.est-2023');
+    const originalride = document.querySelector('.original-ride');
 
-    function fillLetters() {
-        letters.forEach((letter, index) => {
-            setTimeout(() => {
-                letter.style.color = '#333';
-            }, index * fillDelay);
-        });
-    }
-
-    setTimeout(fillLetters, delay);
+    setTimeout(() => {
+        textSoul.classList.add('animazione-testo');
+    },200);
+    setTimeout(() => {
+        textVolks.classList.add('animazione-testo');
+    }, 400); 
+    setTimeout(() => {
+        VWClub.classList.add('animazione-vwclub');
+    }, 700); 
+    setTimeout(() => {
+        est2023.classList.add('animazione-est2023');
+    }, 700);
+    setTimeout(() => {
+        originalride.classList.add('animazione-OR');
+    }, 700);
 });
