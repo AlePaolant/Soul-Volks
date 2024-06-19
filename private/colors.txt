@@ -1,0 +1,7 @@
+COLORS
+
+FROM PICS:
+red: 222,88,73
+green: 78,111,105
+grey: 173,178,180
+grey-white: 220, 224, 228
