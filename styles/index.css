@@ -2,7 +2,16 @@
     width: 100vw;
     height: 150vh;
 }
-
+/*
+.colori{
+    nero: #15120d
+    rosso: #9e2f23
+    giallo: #f9a822
+    crema: #fbedc3
+    attuale: #fef9ec
+    verdino: #93d3ae
+    verde: #36ada1
+}*/
 /*SEZIONE MAIN*/
 .main{
     position: relative;
@@ -13,6 +22,16 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
+}
+.color-triangle{
+    position: absolute;
+    width: 200%;
+    height: 120%;
+    background-color: #e12713;
+    margin-left: 76%;
+    transform: rotate(-45deg);
+    opacity: 70%;
+    z-index: 0;
 }
 .home-main-p1{
     position: absolute;
@@ -106,10 +125,10 @@
     font-style: italic;
     font-size: 11rem;
     line-height: 1;
-    color: #15120d;
+    color: #fef9ec;
 }
 .animazione-vwclub{
-    opacity: 5%;
+    opacity: 10%;
     transform: translateX(0);
 }
 .original-ride{
@@ -132,6 +151,52 @@
 .animazione-OR{
     opacity: 1;
     transform: rotate(90deg) translateY(0);
+}
+.evento-mvc{
+    position: absolute;
+    width: 18%;
+    height: 15%;
+    margin-left: 77%;
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    z-index: 0;
+    transform: translateY(20%);
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
+}
+.evento-mvc p{
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.1rem;
+    line-height: 1.3;
+    color: #fef9ec;
+}
+.animazione-eventoMVC{
+    opacity: 1;
+    transform: translateY(0);
+}
+.arrow-mvc{
+    position: absolute;
+    width: 7%;
+    margin-left: 84%;
+    margin-top: 5.5%;
+    z-index: 0;
+    opacity: 0;
+    transform: rotate(-80deg);
+    transition: transform 1s ease, opacity 1s ease;
+    animation: flashAnimation 5s ease-in-out infinite;
+    animation-delay: 3000ms;
+}
+@keyframes flashAnimation {
+    0%, 50%, 100% {
+        opacity: 0;
+    }
+    25%, 75% {
+        opacity: 80%;
+    }
 }
 .palette-container{
     position: absolute;
@@ -236,3 +301,143 @@
         opacity: 0.7;
     }
 }
+
+
+
+/* SEZIONE CLUB*/
+.club{
+    position: relative;
+    width: 100vw;
+    height: 200vh;
+    overflow: hidden;
+    background-color: #fefbf6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    box-shadow: 0 -30px 20px -5px rgba(0, 0, 0, 0.3);
+}
+.club .container {
+    display: flex;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.club .container-club{
+    height: auto;
+}
+.club .div-sx, .club .div-dx{
+    width: 50%;
+    height: 50%;
+    flex: 1;
+}
+.club .div-sx{
+    width: 50%;
+    justify-content: center;
+}
+.ilclub-img{
+    position: absolute;
+    width: 23%;
+    margin-left: 8%;
+    margin-top: 5%;
+    z-index: 1;
+}
+.ilclub-title{
+    position: absolute;
+    z-index: 3;
+    margin-left: 3%;
+    font-size: 18rem;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: 0.05em;
+    line-height: 0.9;
+    color: #9e2f23;
+    margin-top: 0;
+    margin-right: 0;
+    text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+}
+.club .div-dx{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.club p{
+    font-family: "Poppins", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 1.1rem;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.3;
+    color: #15120d;
+    padding-left: 7%;
+    padding-right: 5%;
+}
+.club .container-offerte{
+    height: auto;
+}
+.club .lead {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.card {
+    border: none;
+    background-color: #f8f9fa;
+    transition: transform 0.3s;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.card-body img {
+    width: 100%;
+    height: auto;
+}
+
+.card-body ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.card-body ul li {
+    font-size: 0.9rem;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+
+
+/* GALLERY */
+.gallery {
+    background-color: #fefbf6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-item {
+    background-color: #dcdcdc;
+    margin: 10px;
+}
+
+.gallery-item.small {
+    height: 100px;
+}
+
+.gallery-item.large {
+    height: 210px;
+}
+
+.gallery-item.tall {
+    height: 210px;
+}
+
+.gallery-item.wide {
+    height: 100px;
+}
+

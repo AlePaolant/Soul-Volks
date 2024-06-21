@@ -64,7 +64,8 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playwrite+US+Trad:wght@100..400&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap">
     <!-- Bootstrap + Bootstrap Icons-->
@@ -79,7 +80,7 @@
 
 <body>
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg start-animation" id="navbar">
+    <nav class="navbar navbar-expand-lg animation" id="navbar">
         <div class="container-fluid">
             <div class="navbar-left">
                 <a href="index.html" class="navbar-brand">
@@ -95,7 +96,7 @@
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a href="index.html#club" class="nav-link">Club</a></li>
                     <li class="nav-item"><a href="index.html#gallery" class="nav-link">Gallery</a></li>
-                    <li class="nav-item"><a href="index.html#contatti" class="nav-link">Contatti</a></li>
+                    <li class="nav-item"><a href="index.html#iscrizione" class="nav-link">Iscrizione</a></li>
                 </ul>
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a href="mvc.html" class="nav-link">Matese Volks Camp</a></li>
@@ -112,11 +113,15 @@
         <!--
         <img src="img/home/main-home-p1.png" class="home-main-p1" alt="">
         <img src="img/home/main-home-p2.png" class="home-main-p2" alt="">
-        --> 
-        <img src="img/home/main-home-back.png" class="home-main-bg" alt="">
+        -->
+        <div class="color-triangle"></div>
+        <img src="img/home/main-home-back.png" class="home-main-bg animation" alt="">
         <div class="main-home-text">
             <div class="text-soul">
                 <h1>SOUL</h1>
+            </div>
+            <div class="est-2023">
+                <h3>EST. 2023</h3>
             </div>
             <div class="text-volks">
                 <h1>VOLKS</h1>
@@ -124,10 +129,17 @@
             <div class="original-ride">
                 <h2>Original Ride</h2>
             </div>
-            <div class="est-2023">
-                <h3>EST. 2023</h3>
-            </div>            
-            <div class="palette-container">
+            <div class="evento-mvc">
+                <!--                
+                <p>Segna la data: un evento unico ti aspetta</p>
+                <p>Non perdere il nostro primo grande evento</p>
+                <p>Pronto per un'estate diversa?</p>
+                <p>Un weekend all'insegna delle auto storiche e dello spirito vintage</p>-->
+                <p>Scopri il programma del nostro primo evento: auto d'epoca, musica dal vivo, mercatini vintage e tante
+                    altre sorprese!</p>
+            </div>
+            <img src="img/home/whitearrow.png" class="arrow-mvc" alt="">
+            <div class="palette-container animation">
                 <div class="palette pal1"></div>
                 <div class="palette pal2"></div>
                 <div class="palette pal3"></div>
@@ -143,11 +155,131 @@
         <div class="vw-club">
             <h3>VOLKS</h3>
         </div>
-        <img src="img/home/main-home-front.png" class="home-main-front" alt="">
+        <img src="img/home/main-home-front.png" class="home-main-front animation" alt="">
         <img src="img/home/logovwhome.png" class="home-logo-vw" alt="">
     </section>
 
+    <!-- CLUB -->
+    <section class="club" id="club">
+        <div class="container container-club">
+            <div class="div-sx">
+                <h1 class="ilclub-title">Il  Club</h1>
+                <img src="img/home/back-ilclub.jpg" class="ilclub-img" alt="">
+            </div>
+            <div class="div-dx">
+                <p class="paragrafo1">Benvenuto nel mondo di Soul Volks, il club automobilistico dedicato agli amanti delle
+                    Volkswagen d'epoca. Qui non si parla solo di auto, ma di una vera e propria famiglia che condivide
+                    la passione per l'eredità storica e il design iconico dei nostri adorati Maggiolini, transporter e
+                    altri
+                    modelli unici della Volkswagen.</p>
+                <p class="paragrafo2">Soul Volks è nato per riunire coloro che condividono la passione per i classici della Volkswagen, tra
+                    cui il celebre Maggiolino e il leggendario transporter T1, T2 e T3. Ognuno di questi veicoli rappresenta
+                    molto più di un semplice mezzo di trasporto: sono icone di creatività e design che hanno influenzato
+                    epoche e ispirato generazioni di appassionati automobilistici.</p>
+            </div>
+        </div>
+        <div class="container container-offerte">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-lg-left">
+                    <h1>Perché Iscriversi</h1>
+                    <p class="lead">Scopri tutti i vantaggi della nostra comunità. <a href="#">Vedi cosa possiamo fare per te.</a></p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="card shadow-sm">
+                                <div class="card-body">
+                                    <img src="your-image-path1.png" class="card-img-top mb-3" alt="...">
+                                    <h5 class="card-title">Eventi</h5>
+                                    <p>Partecipa ai nostri raduni, eventi e workshop dedicati per condividere esperienze e passioni con altri appassionati.</p>
+                                    <ul class="list-unstyled">
+                                        <li>Raduni mensili</li>
+                                        <li>Workshop tematici</li>
+                                        <li>Eventi esclusivi</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card shadow-sm">
+                                <div class="card-body">
+                                    <img src="your-image-path2.png" class="card-img-top mb-3" alt="...">
+                                    <h5 class="card-title">Benefici</h5>
+                                    <p>Iscrivendoti, potrai usufruire di sconti su revisioni e ricambi originali, oltre a ricevere assistenza specializzata.</p>
+                                    <ul class="list-unstyled">
+                                        <li>Sconti su revisioni</li>
+                                        <li>Ricambi originali</li>
+                                        <li>Assistenza specializzata</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card shadow-sm">
+                                <div class="card-body">
+                                    <img src="your-image-path3.png" class="card-img-top mb-3" alt="...">
+                                    <h5 class="card-title">Community</h5>
+                                    <p>Troverai nel nostro club una comunità di persone appassionate come te, pronte a offrirti supporto e consigli.</p>
+                                    <ul class="list-unstyled">
+                                        <li>Supporto peer-to-peer</li>
+                                        <li>Consigli dagli esperti</li>
+                                        <li>Forum di discussione</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- GALLERY -->
+    <section class="gallery py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <div class="gallery-item small">
+                        <img src="img/home/main-home-bg.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Titolo immagine 1</h5>
+                            <p class="card-text">Descrizione breve dell'immagine 1.</p>
+                            <a href="path-to-full-image1.jpg" download class="btn btn-primary">Scarica</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="gallery-item small"></div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="gallery-item small"></div>
+                </div>
+                <div class="col-12 col-md-8">
+                    <div class="gallery-item large"></div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="gallery-item small"></div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="gallery-item tall"></div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="gallery-item small"></div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="gallery-item tall"></div>
+                </div>
+                <div class="col-12 col-md-8">
+                    <div class="gallery-item wide"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
 
+    <!-- ISCRIZIONE -->
     <!-- PAGE CONTENT -->
     <div class="page-content bg-primary">
         <h1>Testo h1</h1>
@@ -178,7 +310,7 @@
                                     <li><a href="index.html" class="py-2 d-block">Home</a></li>
                                     <li><a href="index.html#club" class="py-2 d-block">Club</a></li>
                                     <li><a href="index.html#gallery" class="py-2 d-block">Gallery</a></li>
-                                    <li><a href="index.html#contatti" class="py-2 d-block">Contatti</a></li>
+                                    <li><a href="index.html#iscrizione" class="py-2 d-block">Iscrizione</a></li>
                                 </ul>
                             </div>
                         </div>

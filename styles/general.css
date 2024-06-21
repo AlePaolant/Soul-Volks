@@ -94,7 +94,7 @@ a:hover {
     }
 }
 .animation {
-    animation: fadeIn 500ms ease-in-out forwards;
+    animation: fadeIn 400ms ease-in-out forwards;
 }
 
 
@@ -113,7 +113,7 @@ a:hover {
 }
 @media screen and (max-width: 991px) {
     .navbar {
-        background: #fef9ec !important;
+        background: #C7B8A3 !important;
         top: 0;
         position: relative;
     }

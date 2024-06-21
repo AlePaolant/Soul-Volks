@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const VWClub = document.querySelector('.vw-club');
     const est2023 = document.querySelector('.est-2023');
     const originalride = document.querySelector('.original-ride');
+    const eventoMVC = document.querySelector('.evento-mvc');
 
     setTimeout(() => {
         textSoul.classList.add('animazione-testo');
@@ -20,4 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
         originalride.classList.add('animazione-OR');
     }, 700);
+    setTimeout(() => {
+        eventoMVC.classList.add('animazione-eventoMVC');
+    }, 2000);
 });
