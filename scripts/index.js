@@ -25,3 +25,12 @@ document.addEventListener('DOMContentLoaded', function() {
         eventoMVC.classList.add('animazione-eventoMVC');
     }, 2000);
 });
+
+function downloadImage(url) {
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = url.split('/').pop();
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+}

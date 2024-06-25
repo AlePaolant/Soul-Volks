@@ -414,30 +414,48 @@
 
 /* GALLERY */
 .gallery {
-    background-color: #fefbf6;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .gallery-item {
-    background-color: #dcdcdc;
-    margin: 10px;
+    position: relative;
+    margin-bottom: 15px;
 }
 
-.gallery-item.small {
-    height: 100px;
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-.gallery-item.large {
-    height: 210px;
+.gallery-item .overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #fff;
 }
 
-.gallery-item.tall {
-    height: 210px;
+.gallery-item .overlay h5,
+.gallery-item .overlay p {
+    margin: 0;
 }
 
-.gallery-item.wide {
-    height: 100px;
+.gallery-item .download-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    .gallery-item {
+        width: 100%;
+    }
 }
 
