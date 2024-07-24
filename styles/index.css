@@ -1,17 +1,37 @@
-.page-content{
-    width: 100vw;
-    height: 150vh;
+/* POPUP */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* sfondo scuro trasparente */
+    z-index: 10;
+    display: none; /* inizialmente nascosto */
 }
-/*
-.colori{
-    nero: #15120d
-    rosso: #9e2f23
-    giallo: #f9a822
-    crema: #fbedc3
-    attuale: #fef9ec
-    verdino: #93d3ae
-    verde: #36ada1
-}*/
+#popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 20;
+    display: none; /* inizialmente nascosto */
+    text-align: center;
+}
+#closePopup {
+    margin-top: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+/* Effetto sfocatura per il resto del sito */
+.blur {
+    filter: blur(5px);
+}
+
+
 /*SEZIONE MAIN*/
 .main{
     position: relative;
@@ -212,22 +232,22 @@
     height: 100%;
 }
 .pal1{
-    background: #15120d;
+    background: #0d0b09;
 }
 .pal2{
-    background: #9e2f23;
+    background: #79000a;
 }
 .pal3{
-    background: #f9a822;
+    background: #efeed7;
 }
 .pal4{
-    background: #fbedc3;
+    background: #877f6d;
 }
 .pal5{
-    background: #93d3ae;
+    background: #00675c;
 }
 .pal6{
-    background: #36ada1;
+    background: #00435e;
 }
 .est-2023{
     width: 15%;
@@ -256,7 +276,7 @@
     top: -5%;
     left: -20%;
     z-index: 0;
-    opacity: 7%;
+    opacity: 5%;
 }
 
 
@@ -304,11 +324,30 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* SEZIONE CLUB*/
 .club{
     position: relative;
     width: 100vw;
-    height: 200vh;
+    height: 90vh;
     overflow: hidden;
     background-color: #fefbf6;
     display: flex;
@@ -317,145 +356,565 @@
     align-items: flex-start;
     box-shadow: 0 -30px 20px -5px rgba(0, 0, 0, 0.3);
 }
-.club .container {
-    display: flex;
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-.club .container-club{
-    height: auto;
-}
-.club .div-sx, .club .div-dx{
-    width: 50%;
-    height: 50%;
-    flex: 1;
-}
-.club .div-sx{
-    width: 50%;
-    justify-content: center;
-}
-.ilclub-img{
+.club .foto-team{
+    width: 35%;
+    height: 70%;
     position: absolute;
-    width: 23%;
-    margin-left: 8%;
-    margin-top: 5%;
+    right: 0;
+    top: 15%;
+    border-bottom: 20px solid #0d0b09;
+}
+.club .vision-foto{
+    position: absolute;
+    margin-top: 15%;
+    width: 100%;
+    z-index: 2;
+}
+.club .vision-triangle{
+    position: absolute;
+    width: 140%;
     z-index: 1;
+    margin-top: -15%;
+    margin-left: 5%;
+    opacity: 100%;
 }
-.ilclub-title{
+.club .vision-def-shadow{
     position: absolute;
-    z-index: 3;
-    margin-left: 3%;
-    font-size: 18rem;
+    width: 105%;
+    margin-top: 11%;
+    margin-left: -2%;
+    z-index: 2;
+    opacity: 0.6;
+}
+.club .container {
+    margin-left: 0;
+    margin-right: 0;
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.club .club-title{
+    margin-top: 15%;
+    height: 30%;
+    margin-left: 15%;
+    width: 38%;
+}
+.club-title h1{
+    font-size: 14rem;
     font-weight: normal;
     font-style: normal;
-    letter-spacing: 0.05em;
     line-height: 0.9;
-    color: #9e2f23;
-    margin-top: 0;
-    margin-right: 0;
+    color: #15120d;
     text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    transform: scaleX(1.2);
+    margin-left: 7%;
 }
-.club .div-dx{
+.club .club-text-content{
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    height: 40%;
+    margin-left: 13%;
+    margin-top: 2%;
+}
+.club-text-sx, .club-text-dx{
+    width: 48%;
+}
+.club-text-sx{
+    margin-right: 5%;
+}
+.club .club-text-content p{
+    font-size: 1.05rem;
+    font-weight: 300;
+    line-height: 1.2;
+    text-align: start;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* VANTAGGI */
+.vantaggi{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #fefbf6;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
 }
-.club p{
-    font-family: "Poppins", sans-serif;
-    font-optical-sizing: auto;
-    font-size: 1.1rem;
-    font-weight: 300;
-    font-style: normal;
-    line-height: 1.3;
-    color: #15120d;
-    padding-left: 7%;
-    padding-right: 5%;
-}
-.club .container-offerte{
-    height: auto;
-}
-.club .lead {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-}
-
-.card {
-    border: none;
-    background-color: #f8f9fa;
-    transition: transform 0.3s;
-}
-
-.card-title {
-    font-size: 1.25rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-}
-
-.card-body img {
-    width: 100%;
-    height: auto;
-}
-
-.card-body ul {
+.vantaggi .container{
+    padding-right: 0;
     padding-left: 0;
-    list-style: none;
+    margin-left: 0;
+}
+.vantaggi .container-main {
+    padding-left: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 5%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.container-main .container-sx{
+    width: 30%;
+}
+.container-main .container-dx{
+    width: 60%;
+}
+.motore{
+    position: relative;
+    width: 120%;
+    top: 15%;
+}
+.iscriversi-title{
+    margin-top: 5%;
+    height: 25%;
+    width: 100%;
+    text-align: end;
+}
+.iscriversi-title h1{
+    font-size: 11rem;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 0.9;
+    color: #15120d;
+    text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    transform: scaleX(1.2);
+    margin-right: 10%;
+}
+.benefici{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.benefici h1{
+    font-size: 7.5rem;
+    margin: 0;
+}
+.text-section-sx{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+}
+.text-section-dx{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 5px;
+}
+.titolo-e-contenuto {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.contenuto-sx {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.contenuto-dx {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: end;
+}
+.contenuto-sx p, .contenuto-dx p{
+    margin: 0;
+}
+.benefici .bold{
+    font-weight: 500;
+}
+.iscrivitiora{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: end;
+    align-items: end;
+}
+.iscrivitiorabutton{
+    width: 20%;
+}
+.vantaggi .btn {
+    font-family: "Droid", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 3rem;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 0.9;
+    color: #15120d;
+    margin-top: 2%;
+}
+.vantaggi .btn:hover {
+    color: #fff;
+    background-color: #79000a;
+    border-color: #79000a;
 }
 
-.card-body ul li {
-    font-size: 0.9rem;
-}
 
-.card:hover {
-    transform: translateY(-10px);
-}
+
+
+
+
+
+
 
 
 
 /* GALLERY */
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.gallery-item {
+.gallery{
     position: relative;
-    margin-bottom: 15px;
-}
+    width: 100vw;
+    height: 95vh;
+    overflow: hidden;
+    background-color: #fefbf6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-.gallery-item img {
+}
+.container-gallery {
+    padding: 75px 0;
+    margin: 0 auto;
+    width: 1140px;
+  }
+  
+.gallery h1 {
+    position: relative;
+    margin-bottom: 2%;
+    font-size: 8rem;
+  }
+  
+  .gallery-wrap {
+    display: flex;
+    flex-direction: row;
     width: 100%;
-    height: auto;
+    height: 70vh;
+  }
+  
+  .item {
+    flex: 1;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+    transition: flex 0.8s ease;
+  }
+  .item:hover {
+    flex: 7;
+  }
+  
+  .item-1 {
+    background-image: url("../img/home/gallery/garage-02.jpg");
+  }
+  
+  .item-2 {
+    background-image: url("../img/home/gallery/maggiolino-michele-02.jpg");
+  }
+  
+  .item-3 {
+    background-image: url("../img/home/gallery/karman-03.jpg");  
+}
+  
+  .item-4 {
+    background-image: url("../img/home/gallery/maggiolino-boh-03.jpg");  
+}
+  
+  .item-5 {
+    background-image: url("../img/home/gallery/maggiolino-michele-01.jpg");  
+}
+  
+
+
+
+/* CONTATTI */
+.contatti{
+    position: relative;
+    width: 100vw;
+    height: 90vh;
+    overflow: hidden;
+    background-color: #fefbf6;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+.sfondo-nero-grana {
+    width: 100%;
+    margin-top: 0;
+    position: absolute;
+    z-index: 0;
+}
+.contatti::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20%; /* Altezza della sfumatura */
+    background: linear-gradient(to bottom, #fefbf6, transparent); /* Sfumatura dal colore al trasparente */
+    z-index: 2;
+    pointer-events: none; /* Assicura che la sfumatura non interferisca con gli eventi del mouse */
+}
+.contatti-sx, .contatti-dx{
+    width: 50%;
+    height: 100%;
+    z-index: 1;
+}
+.contact-form-container {
+    background: transparent;
+    margin-top: 30%;
+    margin-bottom: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+}
+.contact-form-container label {
     display: block;
+    margin-bottom: 0;
+    font-size: 1rem;
+    color: #efeed7;
 }
-
-.gallery-item .overlay {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    color: #fff;
+.contact-form-container .small-label{
+    font-size: 0.9rem;
 }
-
-.gallery-item .overlay h5,
-.gallery-item .overlay p {
-    margin: 0;
-}
-
-.gallery-item .download-btn {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
+.contact-form-container input[type="text"], .contact-form-container input[type="email"], .contact-form-container textarea{
+    width: 100%;
+    padding: 5px 0;
+    margin-bottom: 20px;
     border: none;
-    padding: 5px 10px;
+    border-bottom: 2px solid #efeed7;
+    background: transparent;
+    color: #efeed7;
+    font-size: 1rem;
+    outline: none;
+}
+.contact-form-container input[type="text"]::placeholder, .contact-form-container input[type="email"]::placeholder, .contact-form-container textarea::placeholder {
+    color: rgba(239, 238, 215, 0.6);
+}
+textarea { 
+    height: 40px;
+    resize: vertical; 
+}
+.contact-form-container .button-contatto {
+    width: 100%;
+    padding: 10px;
+    margin-top: 0;
+    background-color: transparent;
+    color: #efeed7;
+    border: 2px solid #efeed7;
+    border-radius: 5px;
     cursor: pointer;
 }
-
-@media (max-width: 900px) {
-    .gallery-item {
-        width: 100%;
-    }
+.contact-form-container .button-contatto:hover {
+    background-color: #efeed7;
+    color: #0d0b09;
+}
+.contact-form-container .checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.contact-form-container .checkbox-container input[type="checkbox"] {
+    margin-right: 10px;
+}
+.contattaci-container{
+    margin-top: 20%;
+    margin-bottom: 20%;
+    margin-left: 30%;
+    margin-right: 10%;
+    width: 50%;
+    height: 50%;
+    align-items: end;
+    text-align: end;
+}
+.contatti h1{
+    font-size: 8rem;
+    transform: scaleX(1.2);
+    margin-right: 10%;
+}
+.quiperte{
+    width: 60%;
+    margin-left: 40%;
+    display: flex;
+    flex-direction: row;
+}
+.quiperte-line{
+    margin-top: 0px;
+    height: 2px;
+    background-color: #15120d;
+}
+.contatti h3{
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 2rem;
+    line-height: 0.8;
+    color: #15120d;
+}
+.buttons-container{
+    display: flex;
+    align-items: end;
+    justify-content: space-around;
+    width: 100%;
+    margin-left: 0;
+    padding: 0px;
+}
+.square-button {
+    flex: 1;
+    aspect-ratio: 1 / 1;
+    margin: 12px;
+    border-radius: 10px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
+.square-button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ISCRIZIONE */
+.iscrizione {
+    position: relative;
+    width: 100vw;
+    height: 95vh;
+    overflow: hidden;
+    background-color: #fefbf6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+.provafotogradiente {
+    width: 120%;
+    margin-top: 0;
+    position: relative;
+    z-index: 1;
+}
+.iscrizione-title{
+    width: 25%;
+    left: 5%;
+    top: 25%;
+    position: absolute;
+    z-index: 2;
+    text-align: start;
+}
+.iscrizione-title h1{
+    font-size: 8rem;
+    color: #efeed7;
+}
+.modulo{
+    width: 35%;
+    right: 5%;
+    top: 25%;
+    position: absolute;
+    z-index: 2;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.modulo p{
+    color: #efeed7;
+    padding: 5px;
+}
+.modulo a{
+    color: #efeed7;
+    font-weight: 500;
+}
+.download-form-container {
+    background: transparent;
+    padding: 2%;
+    width: 100%;
+}
+.download-form-container label {
+    display: block;
+    margin-bottom: 2px;
+    font-size: 1rem;
+    color: #efeed7;
+}
+.download-form-container .small-label{
+    font-size: 0.9rem;
+}
+.download-form-container input[type="email"] {
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 2px solid #efeed7;
+    background: transparent;
+    color: #efeed7;
+    font-size: 1rem;
+    outline: none;
+}
+.download-form-container input[type="email"]::placeholder {
+    color: rgba(239, 238, 215, 0.6); /* placeholder color with some transparency */
+}
+.button-download {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10%;
+    background-color: transparent;
+    color: #efeed7;
+    border: 2px solid #efeed7;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button-download:hover {
+    background-color: #efeed7;
+    color: #0d0b09;
+}
+.g-recaptcha {
+    margin-bottom: 20px;
+}
+.download-form-container .checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.download-form-container .checkbox-container input[type="checkbox"] {
+    margin-right: 10px;
+}

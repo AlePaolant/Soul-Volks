@@ -26,11 +26,53 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 2000);
 });
 
-function downloadImage(url) {
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = url.split('/').pop();
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-}
+
+//MODULO CONTATTI
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    const accept = document.getElementById('accept').checked;
+
+    if (!accept) {
+        alert('Devi accettare i termini per inviare il modulo.');
+        event.preventDefault();
+    }
+});
+
+
+
+// DOWNLOAD MODULO DI ISCRIZIONE
+document.getElementById('download-form').addEventListener('submit', function(event) {
+    const recaptcha = document.querySelector('.g-recaptcha-response').value;
+    const email = document.getElementById('email').value;
+    const accept = document.getElementById('accept').checked;
+
+    if (!recaptcha) {
+        alert('Per favore, completa il reCAPTCHA.');
+        event.preventDefault();
+    }
+    if (!email) {
+        alert('Per favore, inserisci una email valida.');
+        event.preventDefault();
+    }
+    if (!accept) {
+        alert('Devi accettare i termini per scaricare il modulo.');
+        event.preventDefault();
+    }
+});
+
+// POPUP EVENTO 
+/*
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+        document.getElementById('overlay').style.display = 'block';
+        document.getElementById('popup').style.display = 'block';
+        document.body.classList.add('blur');
+    }, 10000); //10000ms -> 10s
+
+    // Gestisci la chiusura del popup
+    document.getElementById('closePopup').addEventListener('click', function() {
+        document.getElementById('overlay').style.display = 'none';
+        document.getElementById('popup').style.display = 'none';
+        document.body.classList.remove('blur');
+    });
+});
+*/
