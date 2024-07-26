@@ -60,19 +60,18 @@ document.getElementById('download-form').addEventListener('submit', function(eve
 });
 
 // POPUP EVENTO 
-/*
 document.addEventListener('DOMContentLoaded', function() {
+    // Mostra il popup dopo 10 secondi
     setTimeout(function() {
         document.getElementById('overlay').style.display = 'block';
-        document.getElementById('popup').style.display = 'block';
+        document.getElementById('popup-mvc').style.display = 'block';
         document.body.classList.add('blur');
-    }, 10000); //10000ms -> 10s
+    }, 200000);
 
     // Gestisci la chiusura del popup
-    document.getElementById('closePopup').addEventListener('click', function() {
+    document.getElementById('closePopup-mvc').addEventListener('click', function() {
         document.getElementById('overlay').style.display = 'none';
-        document.getElementById('popup').style.display = 'none';
+        document.getElementById('popup-mvc').style.display = 'none';
         document.body.classList.remove('blur');
     });
 });
-*/

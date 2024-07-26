@@ -106,14 +106,15 @@
     </nav>
 
     <!-- APPUNTI: POPUP EVENTO DOPO 10s da implementare -->
-    <!-- POPUP 
+    <!-- POPUP -->
     <div id="overlay"></div>
-    <div id="popup">
+    <div id="popup-mvc">
+        <img src="img/home/matese-volks-camp-locandina.jpg" alt="">
         <h2>Benvenuto!</h2>
         <p>Questo è un messaggio di popup.</p>
-        <button id="closePopup">Chiudi</button>
+        <button id="closePopup-mvc">Chiudi</button>
     </div>
-    --> 
+   
 
     <!-- MAIN -->
     <section class="main" id="main">
@@ -170,9 +171,11 @@
     <!-- CLUB -->
     <section class="club" id="club">
         <div class="foto-team">
-            <img src="img/home/vision-defined-shadow.png" class="vision-def-shadow" alt="Cerchio rosso">
             <img src="img/home/vision-triangle.png" class="vision-triangle" alt="Triangolo blu">
-            <img src="img/home/vision.png" class="vision-foto" alt="Fondatori di Soul Volks">
+            <img src="img/home/vision/Domenico-level1-sx1.png" class="vision-fotos vision-01" alt="">
+            <img src="img/home/vision/Foschino-level2-dx2.png" class="vision-fotos vision-02" alt="">
+            <img src="img/home/vision/Antonio-level3-dx1.png" class="vision-fotos vision-03" alt="">
+            <img src="img/home/vision/Michele-level4-sx2.png" class="vision-fotos vision-04" alt="">
         </div>
         <div class="container">
             <div class="club-title">
@@ -293,23 +296,32 @@
                 </form>
             </div>
         </div>
-        <div class="contatti-dx bg-secondary">
-            <div class="contattaci-container bg-danger">
+        <div class="contatti-dx">
+            <div class="contattaci-container">
                 <h1>Contattaci</h1>
                 <div class="quiperte">
-                    <div class="quiperte-line bg-secondary"></div>
+                    <div class="quiperte-line"></div>
                     <h3>Siamo qui per te</h3>
                 </div>
-                <div class="buttons-container bg-secondary">
-                    <div class="square-button">
-                        <p>Content 1</p>
-                    </div>
-                    <div class="square-button">
-                        <p>Content 2</p>
-                    </div>
-                    <div class="square-button">
-                        <p>Content 3</p>
-                    </div>
+                <div class="buttons-container">
+                    <a href="tel:+393274309080">
+                        <div class="square-button">
+                            <i class="bi bi-telephone"></i>
+                            <i class="bi bi-telephone-fill hidden"></i>
+                        </div>
+                    </a>
+                    <a href="mailto:alexpaolantonio@gmail.com?cc=apaolan02k@gmail.com&bcc=civico32alessandro@gmail.com&subject=Mail prova sito soulvolks&body=Demo emailao" target="_blank">
+                        <div class="square-button">
+                            <i class="bi bi-envelope"></i>
+                            <i class="bi bi-envelope-fill hidden"></i>
+                        </div>
+                    </a>
+                    <a href="https://maps.app.goo.gl/YpanGgKryXV9CSeM7" target="_blank">
+                        <div class="square-button">
+                            <img src="img/home/mapcustomicon-white.png" class="custom-map-icon" alt="custom map icon white">
+                            <img src="img/home/mapcustomicon-black.png" class="custom-map-icon hidden" alt="custom map icon black">
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
