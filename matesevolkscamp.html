@@ -76,6 +76,10 @@
     <!-- Styles -->
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/mvc.css">
+    <!-- Mapbox GL JS -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
+    <script src="scripts/map-custom.js"></script>
 </head>
 
 <body>
@@ -119,9 +123,9 @@
         <img src="img/mvc/nuvola03.png" class="nuvola03" alt="">
         <img src="img/mvc/nuvola04.png" class="nuvola04" alt="">
         <!-- data-luogo -->
-         <div class="dataluogo">
+        <div class="dataluogo">
             <h2>23/24/25 AGOSTO 2024 - CAMPITELLO MATESE - (CB)</h2>
-         </div>
+        </div>
     </section>
 
 
@@ -167,8 +171,10 @@
                             </div>
                         </div>
                         <div class="topic-corpo">
-                            <p>Il meeting è riservato a tutti i veicoli a marchio Volkswagen, e tutti i suoi derivati.</p>
-                            <p>La direzione si riserva il diritto di selezione sull'ingresso dei veicoli nell'area espositiva.</p>
+                            <p>Il meeting è riservato a tutti i veicoli a marchio Volkswagen, e tutti i suoi derivati.
+                            </p>
+                            <p>La direzione si riserva il diritto di selezione sull'ingresso dei veicoli nell'area
+                                espositiva.</p>
                             <!-- TIMBRO "OLD IS GOOD" - VINTAGE -->
                         </div>
                     </div>
@@ -198,7 +204,8 @@
                         <div class="topic-corpo">
                             <p>Concerti live <br> dj set & vinyl selection.</p>
                             <p> </p>
-                            <p>Preparati ad un weekend di all-nighter: intrattenimento, spettacoli e performance h24.</p>
+                            <p>Preparati ad un weekend di all-nighter: intrattenimento, spettacoli e performance h24.
+                            </p>
                         </div>
                     </div>
                     <div class="topic">
@@ -211,7 +218,8 @@
                             </div>
                         </div>
                         <div class="topic-corpo">
-                            <p>Ricambistica Volkswagen, Oggettistica, Collezionismo, Modernariato, Antiquariato, Vinili, Hi-Fi</p>
+                            <p>Ricambistica Volkswagen, Oggettistica, Collezionismo, Modernariato, Antiquariato, Vinili,
+                                Hi-Fi</p>
                             <p>Insomma, Second Hands e Curiosità a 360 gradi</p>
                         </div>
                     </div>
@@ -315,7 +323,7 @@ Non vediamo l’ora di accogliervi tra stand e bancarelle, per un viaggio nel pa
 
 
     <!-- PROGRAMMA -->
-    <section class="programma bg-danger" id="programma">
+    <section class="programma" id="programma">
         <div class="programma-title">
             <h2>Programma</h2>
         </div>
@@ -452,46 +460,61 @@ Non vediamo l’ora di accogliervi tra stand e bancarelle, per un viaggio nel pa
     -->
     <!-- SERVIZI -->
     <section class="servizi" id="servizi">
-        <div class="container bg-secondary">
+        <div class="container">
             <div class="div-sx">
-                <div class="servizi-container bg-primary">
+                <div class="servizi-container">
                     <div class="services">
                         <h3>SERVIZI</h3>
                         <div class="lista-servizi">
                             <li>Piscina</li>
                             <li>doccia</li>
                             <li>franco</li>
+                            <li>Piscina</li>
+                            <li>doccia</li>
+                            <li>franco</li>
+                            <li>Piscina</li>
+                            <li>doccia</li>
+                            <li>franco</li>
+                            <li>franco</li>
+                            <li>franco</li>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="div-dx bg-danger">
+            <div class="div-dx">
                 <div class="faq">
                     <div class="faq-title">
                         <h3>FAQs</h3>
                     </div>
                     <div class="faq-item">
-                        <h3>Occorre una prenotazione?</h3>
-                        <h3 class="answer">No. Nel momento dell'iscrizione ti verrà indicato il posteggio, le aree tenda e gli orari delle attività.</h3>
+                        <h3 class="question"><i class="bi bi-caret-right-fill"></i>Occorre una prenotazione?</h3>
+                        <h3 class="answer fontrid"><i class="bi bi-caret-down-fill"></i>No. Nel momento dell'iscrizione ti verrà indicato il posteggio, 
+                            le aree tenda e gli orari delle attività.</h3>
                     </div>
                     <div class="faq-item">
-                        <h3>Ci sono opzioni di cibo senza glutine e vegane?</h3>
-                        <h3 class="answer">Sì, gli stand enogastronomici offrono una varietà di prodotti gastronomici locali, inclusi opzioni vegane e senza glutine.</h3>
+                        <h3 class="question"><i class="bi bi-caret-right-fill"></i>Ci sono opzioni di cibo senza glutine e vegane?</h3>
+                        <h3 class="answer fontrid"><i class="bi bi-caret-down-fill"></i>Sì, gli stand enogastronomici offrono una varietà di prodotti 
+                            gastronomici locali, inclusi opzioni vegane e senza glutine.</h3>
                     </div>
                     <div class="faq-item">
-                        <h3>Sono disponibili servizi igienici e docce nel campeggio?</h3>
-                        <h3 class="answer">L'area campeggio non è attrezzata, però sono bagni e docce garantiti nelle strutture convenzionate adiacenti.</h3>
+                        <h3 class="question"><i class="bi bi-caret-right-fill"></i>Sono disponibili servizi igienici e docce?</h3>
+                        <h3 class="answer fontrid"><i class="bi bi-caret-down-fill"></i>L'area campeggio non è attrezzata, però sono bagni e docce 
+                            garantiti nelle strutture convenzionate adiacenti.</h3>
                     </div>
                     <div class="faq-item">
-                        <h3>È possibile accendere un falò?</h3>
-                        <h3 class="answer">No. Non è possibile accendere fuochi liberi, ma non preoccuparti, al cibo ci pensiamo noi!</h3>
+                        <h3 class="question"><i class="bi bi-caret-right-fill"></i>È possibile accendere un falò?</h3>
+                        <h3 class="answer fontrid"><i class="bi bi-caret-down-fill"></i>No. Non è possibile accendere fuochi liberi, ma non preoccuparti, 
+                            al cibo ci pensiamo noi!</h3>
                     </div>
                     <div class="faq-item">
-                        <h3>Non hai trovato ciò che cercavi?</h3>
-                        <h3 class="answer">CONTATTACI!</h3>
+                        <h3 class="question"><i class="bi bi-caret-right-fill"></i>Non hai trovato ciò che cercavi?</i></h3>
+                        <a href="index.html#contatti">
+                            <h3 class="answer fontupp">CONTATTACI!</h3>
+                        </a>
                     </div>
                 </div>
             </div>
+            
         </div>
         </div>
     </section>
@@ -501,8 +524,24 @@ Non vediamo l’ora di accogliervi tra stand e bancarelle, per un viaggio nel pa
 
     <!-- COME ARRIVARE -->
     <section class="arrivare" id="arrivare">
-        MAPPA IFRAME o se ho tempo mapbox gl js
+        <div id="map"></div>
+
+
     </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- credo che per il momento metterò un iframe, ma appena riesco uso mapbox gl js-->
     <!-- CONTATTI -->
     <section class="contatti" id="contatti">
@@ -512,6 +551,7 @@ Non vediamo l’ora di accogliervi tra stand e bancarelle, per un viaggio nel pa
     <section class="sponsor" id="sponsor">
         SPONSOR QUI
     </section>
+
 
 
 

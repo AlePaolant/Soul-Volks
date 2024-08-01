@@ -245,7 +245,7 @@
 .programma{
     position: relative;
     width: 100vw;
-    height: 70vh;
+    height: 75vh;
     overflow: hidden;
     background-color: #efeed7;
     display: flex;
@@ -259,21 +259,22 @@
 }
 .programma-title h2{
     font-family: 'Times-Sans';
-    font-size: 2rem;
+    font-size: 4rem;
     font-weight: 600;
-    transform: scaleX(0.9);
+    transform: scaleX(1);
+    margin-top: 3%;
+    padding: 10px;
 }
 .container-cards {
+    width: 70%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
 }
 .cards {
     display: flex;
-    gap: 20px;
+    gap: 40px;
 }
-
 .card {
     position: relative;
     width: 300px;
@@ -283,7 +284,6 @@
     align-items: flex-start;
     padding: 0;
 }
-
 .card-content {
     width: 100%;
     height: 100%;
@@ -381,7 +381,7 @@
 .servizi{
     position: relative;
     width: 100vw;
-    height: 100vh;
+    height: 70vh;
     overflow: hidden;
     background-color: #efeed7;
     display: flex;
@@ -390,59 +390,85 @@
     align-items: center;
 }
 .servizi .container{
-    width: 100%;
+    width: 70%;
+    height: 80%;
     display: flex;
     flex-direction: row;
 }
 .div-sx{
     width: 50%;
 }
-.div-dx{
+.div-dx {
     width: 50%;
+    height: 100%;
 }
+
 .faq {
     background-color: transparent;
     color: #000;
     padding: 20px;
     width: 100%;
 }
-.faq-title{
+
+.faq-title {
     border: 2px solid #000;
     padding: 10px 10px;
     margin: 10px;
+    text-align: end;
 }
-.faq-title h3{
+
+.faq-title h3 {
     font-size: 1.3rem;
     font-weight: 500;
+    margin: 0;
 }
+
 .faq-item {
     border: 2px solid #000;
     padding: 10px 10px;
     margin: 10px;
     justify-content: center;
+    overflow: hidden; /* Prevenire l'aumento dell'altezza */
+    height: 50px; /* Altezza fissa */
+    transition: height 0.3s ease; /* Transizione per altezza */
+    position: relative; /* Per posizionare il pallino */
 }
 
-.faq-item h3 {
-    font-size: 1.3rem;  
+.faq-item .question {
+    font-size: 1.1rem;
     cursor: pointer;
-    margin-top: 0.5%;
-    margin-bottom: 0.5%;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-item .fontrid {
+    font-size: 0.9rem;
+}
+
+.faq-item .fontupp {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 0;
 }
 
 .faq-item .answer {
     display: none;
 }
 
-.faq-item:hover .answer {
-    display: block;
-}
-
-.faq-item:hover h3 {
+.faq-item:hover .question {
     display: none;
 }
 
+.faq-item:hover {
+    height: auto; /* Altezza automatica per mostrare la risposta */
+}
+
+.faq-item:hover .answer {
+    display: block;
+}
 .servizi-container {
-    background: #333;
     color: #fff;
     padding: 30px;
     width: 100%;
@@ -462,8 +488,6 @@
 
 
 
-
-
 /* ARRIVARE */
 .arrivare{
     position: relative;
@@ -476,6 +500,28 @@
     justify-content: center;
     align-items: center;
 }
+#map { 
+    position: absolute; 
+    top: 0; 
+    bottom: 0; 
+    width: 100%; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* CONTATTI */
 .contatti{
     position: relative;
