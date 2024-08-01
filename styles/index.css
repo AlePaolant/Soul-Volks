@@ -47,7 +47,7 @@
 }
 .popup-sx img {
     max-width: 100%;
-    border-radius: 20px 0 0 20px;
+    border-radius: 20px;
 }
 .popup-dx {
     width: 50%;
@@ -60,16 +60,28 @@
 }
 
 .popup-dx-content {
-    width: 80%;
-    margin: auto;
-    text-align: center;
+    width: 90%;
+    margin-left: 0;
+    text-align: start;
 }
-
-.popup-title {
-    font-size: 2rem;
+.popup-title{
+    margin-bottom: 20px;
+    width: 100%;
+    margin-left: 10%;
+}
+.popup-title h1{
+    font-size: 3rem;
     font-weight: bold;
     color: #15120d;
-    margin-bottom: 20px;
+    transform: scaleX(1.2);
+}
+.popup-title h2{
+    font-family: "Droid", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 2rem;
+    line-height: 1.1;
+    color: #15120d;
+    transform: scaleX(1.2);
 }
 
 .main-content-popup {
@@ -78,33 +90,39 @@
 
 .main-content-popup h4 {
     font-family: "Poppins", sans-serif;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
+    line-height: 0.9;
     color: #15120d;
     margin-bottom: 10px;
 }
-
+.main-content-popup i{
+    margin-right: 6%;
+}
 .pulsante-evento {
     margin-top: 15%;
+    width: 100%;
 }
 
 .pulsante-evento .btn {
     font-size: 1rem;
     color: #fff;
-    background-color: #79000a;
+    background-color: #00435e;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
+    width: 100%;
+    transition: background-color 0.3s ease;
 }
 
 .pulsante-evento .btn:hover {
-    background-color: #a50012;
+    background-color: #79000a;
 }
 
 /* Pulsante di chiusura */
 #closePopup-mvc {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 10px;
+    right: 10px;
     background: none;
     border: none;
     font-size: 2rem;
@@ -112,10 +130,12 @@
 }
 
 #closePopup-mvc i {
-    color: #0d0b09;
-    background-color: #ddd;
+    color: #fff;
+    background-color: #00435e;
     border-radius: 50%;
-    padding: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #closePopup-mvc:hover i {

@@ -60,18 +60,27 @@ document.getElementById('download-form').addEventListener('submit', function(eve
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Mostra il popup dopo 10 secondi
+    // Mostra il popup dopo 2 secondi
     setTimeout(function() {
         document.getElementById('overlay').style.display = 'block';
         document.getElementById('popup-mvc').style.display = 'block';
         document.body.classList.add('blur');
-    }, 2000);
+    }, 5000);
 
-    // Gestisci la chiusura del popup
-    document.getElementById('closePopup-mvc').addEventListener('click', function() {
+    // Funzione per chiudere il popup
+    function closePopup() {
         document.getElementById('overlay').style.display = 'none';
         document.getElementById('popup-mvc').style.display = 'none';
         document.body.classList.remove('blur');
+    }
+
+    // Gestisci la chiusura del popup tramite il pulsante
+    document.getElementById('closePopup-mvc').addEventListener('click', closePopup);
+    // Gestisci la chiusura del popup cliccando sull'overlay
+    document.getElementById('overlay').addEventListener('click', closePopup);
+    // Evita che il clic all'interno del popup chiuda il popup
+    document.getElementById('popup-mvc').addEventListener('click', function(event) {
+        event.stopPropagation();
     });
 });
 
