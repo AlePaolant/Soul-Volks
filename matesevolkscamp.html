@@ -80,6 +80,9 @@
     <link href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css" rel="stylesheet">
     <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
     <script src="scripts/map-custom.js"></script>
+    <!-- Threebox -->
+    <script src="https://cdn.jsdelivr.net/gh/jscastro76/threebox@v.2.2.2/dist/threebox.min.js" type="text/javascript"></script>
+    <link href="https://cdn.jsdelivr.net/gh/jscastro76/threebox@v.2.2.2/dist/threebox.css" rel="stylesheet">
 </head>
 
 <body>
@@ -115,13 +118,13 @@
     <!-- MAIN -->
     <section class="main">
         <div class="main-text">
-            <img src="img/mvc/matesevolkscamp.png" class="mvc-text" alt="">
+            <img src="img/mvc/matesevolkscamp.png" class="mvc-text" alt="Logo Matese Volks Camp">
         </div>
-        <img src="img/mvc/miletto-landscape.png" class="miletto" alt="">
-        <img src="img/mvc/nuvola01.png" class="nuvola01" alt="">
-        <img src="img/mvc/nuvola02.png" class="nuvola02" alt="">
-        <img src="img/mvc/nuvola03.png" class="nuvola03" alt="">
-        <img src="img/mvc/nuvola04.png" class="nuvola04" alt="">
+        <img src="img/mvc/miletto-landscape.png" class="miletto" alt="Landscape Monte Miletto">
+        <img src="img/mvc/nuvola01.png" class="nuvola01" alt="Nuvola png">
+        <img src="img/mvc/nuvola02.png" class="nuvola02" alt="Nuvola png">
+        <img src="img/mvc/nuvola03.png" class="nuvola03" alt="Nuvola png">
+        <img src="img/mvc/nuvola04.png" class="nuvola04" alt="Nuvola png">
         <!-- data-luogo -->
         <div class="dataluogo">
             <h2>23/24/25 AGOSTO 2024 - CAMPITELLO MATESE - (CB)</h2>
@@ -339,7 +342,7 @@ Non vediamo l’ora di accogliervi tra stand e bancarelle, per un viaggio nel pa
                         <li>Tanto altro ancora...</li>
                         <button onclick="openPopup('popup1')">Programma completo</button>
                     </div>
-                    <img src="img/mvc/card-beetle.png" class="card-img" alt="">
+                    <img src="img/mvc/card-beetle.png" class="card-img" alt="Foto di un Maggiolino old style">
                 </div>
                 <div class="card">
                     <div class="card-content">
@@ -351,7 +354,7 @@ Non vediamo l’ora di accogliervi tra stand e bancarelle, per un viaggio nel pa
                         <li>Tanto altro ancora...</li>
                         <button onclick="openPopup('popup2')">Programma completo</button>
                     </div>
-                    <img src="img/mvc/card-t1.png" class="card-img" alt="">
+                    <img src="img/mvc/card-t1.png" class="card-img" alt="Foto di un Transporter T1">
                 </div>
                 <div class="card">
                     <div class="card-content">
@@ -362,7 +365,7 @@ Non vediamo l’ora di accogliervi tra stand e bancarelle, per un viaggio nel pa
                         <li>Premiazione veicoli <br>& equipaggi</li>
                         <button onclick="openPopup('popup3')">Programma completo</button>
                     </div>
-                    <img src="img/mvc/card-karman.png" class="card-img" alt="">
+                    <img src="img/mvc/card-karman.png" class="card-img" alt="Foto di una Karmann Ghia">
                 </div>
             </div>
 
@@ -488,33 +491,40 @@ Non vediamo l’ora di accogliervi tra stand e bancarelle, per un viaggio nel pa
                     </div>
                     <div class="faq-item">
                         <h3 class="question"><i class="bi bi-caret-right-fill"></i>Occorre una prenotazione?</h3>
-                        <h3 class="answer fontrid"><i class="bi bi-caret-down-fill"></i>No. Nel momento dell'iscrizione ti verrà indicato il posteggio, 
+                        <h3 class="answer fontrid"><i class="bi bi-caret-down-fill"></i>No. Nel momento dell'iscrizione
+                            ti verrà indicato il posteggio,
                             le aree tenda e gli orari delle attività.</h3>
                     </div>
                     <div class="faq-item">
-                        <h3 class="question"><i class="bi bi-caret-right-fill"></i>Ci sono opzioni di cibo senza glutine e vegane?</h3>
-                        <h3 class="answer fontrid"><i class="bi bi-caret-down-fill"></i>Sì, gli stand enogastronomici offrono una varietà di prodotti 
+                        <h3 class="question"><i class="bi bi-caret-right-fill"></i>Ci sono opzioni di cibo senza glutine
+                            e vegane?</h3>
+                        <h3 class="answer fontrid"><i class="bi bi-caret-down-fill"></i>Sì, gli stand enogastronomici
+                            offrono una varietà di prodotti
                             gastronomici locali, inclusi opzioni vegane e senza glutine.</h3>
                     </div>
                     <div class="faq-item">
-                        <h3 class="question"><i class="bi bi-caret-right-fill"></i>Sono disponibili servizi igienici e docce?</h3>
-                        <h3 class="answer fontrid"><i class="bi bi-caret-down-fill"></i>L'area campeggio non è attrezzata, però sono bagni e docce 
+                        <h3 class="question"><i class="bi bi-caret-right-fill"></i>Sono disponibili servizi igienici e
+                            docce?</h3>
+                        <h3 class="answer fontrid"><i class="bi bi-caret-down-fill"></i>L'area campeggio non è
+                            attrezzata, però sono bagni e docce
                             garantiti nelle strutture convenzionate adiacenti.</h3>
                     </div>
                     <div class="faq-item">
                         <h3 class="question"><i class="bi bi-caret-right-fill"></i>È possibile accendere un falò?</h3>
-                        <h3 class="answer fontrid"><i class="bi bi-caret-down-fill"></i>No. Non è possibile accendere fuochi liberi, ma non preoccuparti, 
+                        <h3 class="answer fontrid"><i class="bi bi-caret-down-fill"></i>No. Non è possibile accendere
+                            fuochi liberi, ma non preoccuparti,
                             al cibo ci pensiamo noi!</h3>
                     </div>
                     <div class="faq-item">
-                        <h3 class="question"><i class="bi bi-caret-right-fill"></i>Non hai trovato ciò che cercavi?</i></h3>
+                        <h3 class="question"><i class="bi bi-caret-right-fill"></i>Non hai trovato ciò che cercavi?</i>
+                        </h3>
                         <a href="index.html#contatti">
                             <h3 class="answer fontupp">CONTATTACI!</h3>
                         </a>
                     </div>
                 </div>
             </div>
-            
+
         </div>
         </div>
     </section>
@@ -524,9 +534,15 @@ Non vediamo l’ora di accogliervi tra stand e bancarelle, per un viaggio nel pa
 
     <!-- COME ARRIVARE -->
     <section class="arrivare" id="arrivare">
-        <div id="map"></div>
-
-
+        <!--
+        <div class="map-container bg-danger" id="map-container">
+            <div id="map"></div>
+            <div class="vignette"></div>
+        </div>
+    -->
+        <div class="mappasostitutiva">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4843.035168014491!2d14.382872156539678!3d41.46281363135394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133a6497736fd05d%3A0x26094f9bde288844!2s86027%20Campitello%20Matese%2C%20Province%20of%20Campobasso!5e1!3m2!1sen!2sit!4v1722852639705!5m2!1sen!2sit" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
     </section>
 
 
@@ -545,12 +561,74 @@ Non vediamo l’ora di accogliervi tra stand e bancarelle, per un viaggio nel pa
     <!-- credo che per il momento metterò un iframe, ma appena riesco uso mapbox gl js-->
     <!-- CONTATTI -->
     <section class="contatti" id="contatti">
-        foto di sfondo da trovare, pulsante per contatti che rimanda all'altra pagina
+        <div class="contatti-container">
+            <h1>Hai ancora domande?</h1>
+            <h4>Non preoccuparti, siamo qui per te!</h4>
+            <a href="index.html#contatti">
+                <button class="button-contatto">CONTATTACI</button>
+            </a>
+        </div>
+        <img src="img/mvc/notturno-contatti.jpg" class="notturno-contatti" alt="foto notturna Matese">
     </section>
     <!-- SPONSOR -->
     <section class="sponsor" id="sponsor">
-        SPONSOR QUI
+        <div class="sponsor-container">
+            <div class="div-left">
+                <div class="testo">
+                    <h1>I nostri sponsor:</h1>
+                    <div class="corpo">
+                        <h4>Siamo orgogliosi di collaborare con aziende e organizzazioni che condividono la nostra
+                            visione.</h4>
+                        <h4>Un caloroso ringraziamento a tutti i nostri sponsor per la loro generosità e il loro impegno
+                            nel sostenerci.</h4>
+                        <h4>La loro partecipazione non solo rende possibile l'evento, ma contribuisce anche a promuovere
+                            cultura, arte e solidarietà.</h4>
+                    </div>
+                    <a href="mailto:alexpaolantonio@gmail.com?cc=apaolan02k@gmail.com&bcc=civico32alessandro@gmail.com&subject=Mail prova sponsor soulvolks&body=Demo emailao" target="_blank">
+                        <button class="button-sponsor">CONTATTACI</button>
+                    </a>
+                </div>
+            </div>
+            <div class="div-right">
+                <div class="logo-cloud">
+                    <div class="logo-item"><img src="img/mvc/sponsor/EURODEPUR2000.png" alt="Sponsor Eurodepur 2000"></div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/GRAZIELLA.png" alt="Sponsor Graziella Gioielli"></div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/UNCLASSICS.png" alt="Sponsor Unclassics"></div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/ZMPGROUP.png" alt="Sponsor ZMP Group"></div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/VENDITTI.png" alt="Sponsor Gestione Industriale Venditti"></div>
+
+                    <div class="logo-item"><img src="img/mvc/sponsor/CENTOMETRI.png" alt="Sponsor Centometri Food & More"></div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/EUGENIA.png" alt="Sponsor Cycling Network Eugenia"></div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/HOTELMILETTO.png" alt="Sponsor Hotel Miletto"></div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/KRISTIANIA.png" alt="Sponsor Kristiania - The Family Hotel"></div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/MASTICEPRODUZIONI.png" alt="Sponsor Mastice Produzioni"></div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/MGGARAGE.png" alt="Sponsor MG Garage"></div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/SANNIOSAPORI.png" alt="Sponsor Sannio Sapori - Piacere Sannita"></div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/SUPERCAR.png" alt="Sponsor Supercar"></div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/TANELLIASSICURAZIONI.png" alt="Sponsor Tanelli Assicurazioni"></div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/ZAPPACOSTA.png" alt="Sponsor Zappacosta Masserie"></div>
+
+                    <div class="logo-item"><img src="img/mvc/sponsor/AUTOCLASS.png" alt="Sponsor Auto Class Campobasso"></div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/BIERRECHIMICA.png" alt="Sponsor Bierre Chimica"></div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/CASAOREFICI.png" alt="Sponsor Casa Degli Orefici"></div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/CIVICO32.png" alt="Sponsor Civic32 Studio - Photography\\graphic design"></div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/EVENTIMOLISE.png" alt="Sponsor Eventi Molise"></div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/GLOBALSERVICE.png" alt="Sponsor Global Service di Serago Giuseppe"></div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/JEZZA.png" alt="Sponsor Rifugio Jezza"></div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/LAPINETINA.png" alt="Sponsor La Pinetina"></div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/LOSCIATORE.png" alt="Sponsor Club Hotel Lo Sciatore"></div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/MAGICABULA.png" alt="Sponsor Ludoteca Magicabula"></div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/MASTERCAR.png" alt="Sponsor Master Car Auto Village"></div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/MGRICAMBI.png" alt="Sponsor MG Ricambi"></div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/RAMACIOTTO.png" alt="Sponsor Ramaciotto - Pasta Fresca Con Cucina"></div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/WALKONWINESPIRITS.png" alt="Sponsor Walk On Wine Spirits"></div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/YOGADELLARIA.png" alt="Sponsor Yoga dell'Aria"></div>
+                </div>
+            </div>
+        </div>
     </section>
+
+
 
 
 

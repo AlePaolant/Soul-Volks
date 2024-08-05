@@ -23,9 +23,10 @@ const countdown = () => {
         document.getElementById("countdown").innerHTML = "Ci siamo!";
     }
 };
-
 // Aggiorna il countdown ogni secondo
 const interval = setInterval(countdown, 1000);
+
+
 
 //popup programma
 function openPopup(id) {
@@ -38,4 +39,23 @@ function closePopup(event, id) {
 }
 
 
+
+//sponsor animation
+document.addEventListener('DOMContentLoaded', function () {
+    const logoItems = document.querySelectorAll('.logo-item');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    logoItems.forEach(item => {
+        observer.observe(item);
+    });
+});
 

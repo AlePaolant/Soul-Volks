@@ -5,7 +5,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.4);
     z-index: 10;
     display: none; /* inizialmente nascosto */
 }
@@ -17,7 +17,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #f5f5f5;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     z-index: 20; /* più alto di overlay */
     display: none; /* inizialmente nascosto */
     padding: 0;
@@ -40,13 +40,14 @@
 }
 .popup-sx .image-container {
     width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
 }
 .popup-sx img {
-    max-width: 100%;
+    width: 100%;
     border-radius: 20px;
 }
 .popup-dx {
@@ -57,23 +58,26 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    z-index: 1;
 }
 
 .popup-dx-content {
     width: 90%;
     margin-left: 0;
     text-align: start;
+    display: flex;
+    flex-direction: column;
 }
 .popup-title{
     margin-bottom: 20px;
-    width: 100%;
-    margin-left: 10%;
+    width: 80%;
+    margin-left: 0;
+    margin-right: 7%;
 }
 .popup-title h1{
     font-size: 3rem;
     font-weight: bold;
     color: #15120d;
-    transform: scaleX(1.2);
 }
 .popup-title h2{
     font-family: "Droid", sans-serif;
@@ -81,11 +85,11 @@
     font-size: 2rem;
     line-height: 1.1;
     color: #15120d;
-    transform: scaleX(1.2);
 }
 
 .main-content-popup {
     margin-top: 10%;
+    margin-right: 10%;
 }
 
 .main-content-popup h4 {
@@ -127,6 +131,10 @@
     border: none;
     font-size: 2rem;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
 }
 
 #closePopup-mvc i {
@@ -136,6 +144,7 @@
     padding-left: 7px;
     padding-right: 7px;
     transition: background-color 0.3s ease, color 0.3s ease;
+    pointer-events: none;
 }
 
 #closePopup-mvc:hover i {
@@ -147,7 +156,45 @@
 .blur *:not(#popup-mvc):not(#popup-mvc *) {
     filter: blur(1px);
 }
-
+@media screen and (max-width: 1200px) {
+    #popup-mvc {
+        width: 70%;
+    }
+    .popup-title h1{
+        font-size: 2.7rem;
+    }
+    .popup-title h2{
+        font-size: 1.8rem;
+    }
+    .main-content-popup h4{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 763px) {
+    #popup-mvc {
+        width: 50%;
+    }
+    .popup-content{
+        flex-direction: column;
+    }
+    .popup-sx{
+        display: none;
+    }
+    .popup-dx{
+        width: 100%;
+    }
+    .popup-dx-content {
+        margin-left: 5%;
+    }
+}
+@media screen and (max-width: 576px) {
+    #popup-mvc {
+        width: 70%;
+    }
+    .main-content-popup{
+        margin-top: 5%;
+    }
+}
 
 
 
@@ -451,7 +498,7 @@
 .scroll-down-indicator {
     position: absolute;
     margin-top: 46%;
-    margin-left: 50%;
+    margin-left: 47.5%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -492,6 +539,160 @@
         opacity: 0.7;
     }
 }
+@media screen and (max-width: 1400px) {
+    .text-soul h1{
+        font-size: 19rem;
+    }
+    .text-volks h1{
+        font-size: 16rem;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .text-soul h1{
+        font-size: 18rem;
+    }
+    .text-volks h1{
+        font-size: 15rem;
+    }
+    .original-ride {
+        margin-left: 64%;
+    }
+    .scroll-down-indicator {
+        margin-top: 50%;
+    }
+    .home-logo-vw {
+        width: 65%;
+        top: 2%;
+        left: -15%;
+    }
+    .palette-container {
+        margin-left: 83%;
+    }
+    .color-triangle {
+        margin-left: 78%;
+    }
+}
+@media  screen and (max-width: 991px) {
+    .home-main-bg{
+        display: none;
+    }
+    .home-main-front {
+        width: 130%;
+        margin-top: 2%;
+        margin-left: 80%;
+    }
+    .text-soul {
+        margin-left: 8%;
+        margin-top: 2%;
+    }
+    
+    .text-soul h1 {
+        font-size: 14rem;
+    }
+    
+    .text-volks {
+        margin-left: 5%;
+        margin-top: 28%;
+    }
+    .text-volks h1 {
+        font-size: 14rem;
+    }
+    .original-ride {
+        display: none;
+    }
+    .scroll-down-indicator {
+        margin-top: 73%;
+    }
+    .home-logo-vw {
+        width: 90%;
+        top: -20%;
+        left: 20%;
+    }
+    .palette-container {
+        margin-left: 5%;
+        margin-top: 66%;
+        width: 20%;
+    }
+    .color-triangle {
+        margin-left: 140%;
+    }
+    .est-2023 {
+        margin-left: 5%;
+        margin-top: 60%;
+        transform: rotate(0deg) translateY(20%);
+    }
+    .est-2023 h3 {
+        font-size: 1.5rem;
+    }
+    .evento-mvc, .arrow-mvc{
+        display: none;
+    }
+    .vw-club {
+        margin-left: 10%;
+        margin-top: 61%;
+    }
+    .vw-club h3 {
+        font-size: 11rem;
+    }
+}
+@media screen and (max-width: 576px) {
+    .home-main-front {
+        width: 200%;
+        margin-top: 30%;
+        margin-left: 100%;
+    }   
+    .text-soul {
+        margin-left: 25%;
+        margin-top: 5%;
+    }
+    .text-soul h1 {
+        font-size: 11rem;
+    }
+    .text-volks {
+        margin-left: 5%;
+        margin-top: 48%;
+    }
+    .text-volks h1 {
+        font-size: 10rem;
+    }
+    .original-ride {
+        display: none;
+    }
+    .scroll-down-indicator {
+        margin-top: 140%;
+    }
+    .home-logo-vw {
+        width: 90%;
+        top: -20%;
+        left: 20%;
+    }
+    .palette-container {
+        margin-left: 5%;
+        margin-top: 155%;
+        width: 30%;
+        height: 3%;
+    }
+    .color-triangle {
+        width: 300%;
+        height: 250%;
+        margin-left: 300%;
+    }
+    .est-2023 {
+        display: none;
+    }
+    .evento-mvc, .arrow-mvc{
+        display: none;
+    }
+    .vw-club {
+        margin-left: -10%;
+        margin-top: 130%;
+    }
+    .vw-club h3 {
+        font-size: 6rem;
+    }
+}
+
+
 
 
 
@@ -1113,7 +1314,7 @@ textarea {
 
 .provafotogradiente {
     width: 120%;
-    margin-top: 0;
+    margin-top: -13%;
     position: relative;
     z-index: 1;
 }
@@ -1121,7 +1322,7 @@ textarea {
 .iscrizione-title {
     width: 25%;
     left: 5%;
-    top: 25%;
+    top: 20%;
     position: absolute;
     z-index: 2;
     text-align: start;
@@ -1135,7 +1336,7 @@ textarea {
 .modulo {
     width: 35%;
     right: 5%;
-    top: 25%;
+    top: 20%;
     position: absolute;
     z-index: 2;
     align-items: center;

@@ -492,7 +492,7 @@
 .arrivare{
     position: relative;
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     overflow: hidden;
     background-color: white;
     display: flex;
@@ -500,11 +500,45 @@
     justify-content: center;
     align-items: center;
 }
-#map { 
-    position: absolute; 
-    top: 0; 
-    bottom: 0; 
-    width: 100%; 
+.map-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#map {  
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+.vignette{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    background: radial-gradient(circle,transparent,black);
+    opacity: 0.75;
+}
+.custom-marker {
+    background-image: url('https://placekitten.com/50/50');
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.mapboxgl-ctrl-bottom-left, .mapboxgl-ctrl-bottom-right {
+    display: none;
+}
+.mappasostitutiva{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: end;
 }
 
 
@@ -526,23 +560,187 @@
 .contatti{
     position: relative;
     width: 100vw;
-    height: 100vh;
+    height: 65vh;
     overflow: hidden;
     background-color: aqua;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
+    align-items: start;
 }
+.contatti-container{
+    position: relative;
+    width: 36.5%;
+    left: 13%;
+    top: 25%;
+    z-index: 1;
+}
+.contatti-container h1{
+    font-family: 'Times-Sans';
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1;
+    color: #efeed7;
+}
+.contatti-container h4{
+    font-family: 'Times-Sans';
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-weight: 500;
+    transform: scaleX(1.2);
+    margin-left: 9.5%;
+    color: #efeed7;
+}
+
+.notturno-contatti{
+    position: absolute;
+    /*max-width: fit-content;*/
+    width: 100%;
+    top: -5%;
+    z-index: 0;
+}
+.button-contatto {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10%;
+    background-color: transparent;
+    color: #efeed7;
+    border: 2px solid #efeed7;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+.button-contatto:hover {
+    background-color: #efeed7;
+    color: #0d0b09;
+}
+
+
+
+
+
+
+
+
 /* SPONSOR */
 .sponsor{
     position: relative;
     width: 100vw;
-    height: 100vh;
+    height: 70vh;
     overflow: hidden;
-    background-color: white;
+    background-color: #f0f0f0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+.sponsor-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.div-left {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: start;
+  }
+  
+.div-right {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding-right: 50px;
+  }
+  
+  .logo-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    padding: 50px;
+  }
+  
+  .logo-item {
+    margin: 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    transform: scale(0.5) translateY(50px);
+  }
+  
+  .logo-item img {
+    transition: transform 0.3s ease;
+  }
+  
+  .logo-item:hover img {
+    transform: scale(2.5);
+  }
+  
+  .logo-item.in-view {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  
+  /* Dimensioni fisse loghi */
+  .logo-item img {
+    width: 70px;
+  }
+
+  .sponsor .testo{
+    width: 75%;
+    text-align: start;
+  }
+  .sponsor .testo h1{
+    font-family: 'Times-Sans';
+    font-size: 3.9em;
+    font-weight: 600;
+  }
+  .sponsor .corpo{
+    width: 100%;
+    border-top: 2px solid #0d0b09;
+    padding-top: 4%;
+  }
+  .sponsor .testo h4{
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  .button-sponsor {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5%;
+    background-color: transparent;
+    color: #0d0b09;
+    border: 2px solid #0d0b09;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+.button-sponsor:hover {
+    background-color: #0d0b09;
+    color: #f0f0f0;
+}
+
+
+
+  @media (max-width: 768px) {
+    .section {
+      flex-direction: column;
+    }
+  
+    .div-left, .div-right, .div-middle {
+      width: 100%;
+    }
+  
+    .logo-item img {
+      width: 60px;
+    }
+  
+  }
