@@ -41,30 +41,29 @@ document.getElementById('contact-form').addEventListener('submit', function(even
 
 // DOWNLOAD MODULO DI ISCRIZIONE
 document.getElementById('download-form').addEventListener('submit', function(event) {
-    const recaptcha = document.querySelector('.g-recaptcha-response').value;
-    const email = document.getElementById('email').value;
-    const accept = document.getElementById('accept').checked;
+    const email = document.getElementById('user-email').value;
+    const accept = document.getElementById('user-accept').checked;
 
-    if (!recaptcha) {
-        alert('Per favore, completa il reCAPTCHA.');
-        event.preventDefault();
-    }
+    console.log('Email:', email); // Verifica il valore dell'email
+    console.log('Accept:', accept);
+
     if (!email) {
         alert('Per favore, inserisci una email valida.');
         event.preventDefault();
-    }
-    if (!accept) {
+    } else if (!accept) {
         alert('Devi accettare i termini per scaricare il modulo.');
         event.preventDefault();
     }
 });
 
+
+//popup
 document.addEventListener('DOMContentLoaded', function() {
     setTimeout(function() {
         document.getElementById('overlay').style.display = 'block';
         document.getElementById('popup-mvc').style.display = 'block';
         document.body.classList.add('blur');
-    }, 5000);
+    }, 10000);
 
     function closePopup() {
         document.getElementById('overlay').style.display = 'none';
@@ -78,4 +77,3 @@ document.addEventListener('DOMContentLoaded', function() {
         event.stopPropagation();
     });
 });
-

@@ -1,8 +1,15 @@
 $(document).ready(function() {
+    // Funzione per chiudere il menu dopo il clic su un link (hamburger)
+    $('.navbar-nav a').on('click', function() {
+        if ($('.navbar-toggler').is(':visible')) {
+            $('.navbar-collapse').collapse('hide');
+        }
+    });
+
+    // Gestione dello stato della navbar durante lo scroll
     $(window).scroll(function() {
         var scroll = $(window).scrollTop();
 
-        // Gestione dello stato della navbar
         var navbar = $('.navbar');
         var logoNero = $('#logo-nero');
         var logoBianco = $('#logo-bianco');
@@ -33,6 +40,7 @@ $(document).ready(function() {
         }
     });
 });
+
 
 //Anno per copyright
 document.getElementById("year").textContent = new Date().getFullYear();

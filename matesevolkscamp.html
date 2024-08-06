@@ -5,20 +5,16 @@
     <title>Matese Volks Camp</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 
-    Disabilita l'adattamento automatico della larghezza del layout per adattarlo alla larghezza dello schermo del dispositivo.
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    -->
     <!-- SEO Meta Tags -->
     <meta name="description"
         content="Soul Volks è il club Volkswagen d'epoca in Molise. Unisciti a noi per eventi e raduni di Maggiolini, pulmini T1 e altre Volkswagen classiche. Scopri il nostro prossimo evento, il Matese Volks Camp.">
-    <meta name="keywords" content="INSERIRE PAROLE CHIAVE">
-    <meta name="author" content="Alessandro Paolantonio">
+    <meta name="keywords" content="Club Volkswagen d'epoca Italia auto Molise Maggiolino T1 T2 T3 T4 T5 T6 Transporter Raduni Incontri">
+    <meta name="author" content="SoulVolks, AP, Civico32studio">
     <meta name="robots" content="index, follow">
     <!-- Facebook OG -->
     <meta property="og:title" content="Soul Volks">
     <meta property="og:description"
-        content="Soul Volks è il club Volkswagen d'epoca in Molise. Unisciti a noi per eventi e raduni di Maggiolini, pulmini T1 e altre Volkswagen classiche. Scopri il nostro prossimo evento, il Matese Volks Camp.">
+        content="Soul Volks è il club Volkswagen d'epoca in Molise. Unisciti a noi per eventi e raduni di Maggiolini, Transporter e altre Volkswagen classiche. Scopri il nostro prossimo evento, il Matese Volks Camp.">
     <meta property="og:image" content="URL dell'immagine"> <!-- DA MODIFICARE POST DOMINIO -->
     <meta property="og:url" content="URL della tua pagina"> <!-- DA MODIFICARE POST DOMINIO -->
     <meta property="og:type" content="website">
@@ -30,7 +26,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Soul Volks">
     <meta name="twitter:description"
-        content="Soul Volks è il club Volkswagen d'epoca in Molise. Unisciti a noi per eventi e raduni di Maggiolini, pulmini T1 e altre Volkswagen classiche. Scopri il nostro prossimo evento, il Matese Volks Camp.">
+        content="Soul Volks è il club Volkswagen d'epoca in Molise. Unisciti a noi per eventi e raduni di Maggiolini, Transporter e altre Volkswagen classiche. Scopri il nostro prossimo evento, il Matese Volks Camp.">
     <meta name="twitter:image" content="URL dell'immagine"> <!-- DA MODIFICARE POST DOMINIO -->
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon-16x16.png">
@@ -55,8 +51,10 @@
     <!-- Android Icon -->
     <link rel="icon" type="image/png" sizes="192x192" href="img/icons/android-192x192.png">
     <!-- Verification for search engines -->
+     <!--
     <meta name="google-site-verification" content="codice-di-verifica">
     <meta name="msvalidate.01" content="codice-di-verifica">
+    -->
     <!-- Cache control -->
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
@@ -81,7 +79,8 @@
     <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
     <script src="scripts/map-custom.js"></script>
     <!-- Threebox -->
-    <script src="https://cdn.jsdelivr.net/gh/jscastro76/threebox@v.2.2.2/dist/threebox.min.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/gh/jscastro76/threebox@v.2.2.2/dist/threebox.min.js"
+        type="text/javascript"></script>
     <link href="https://cdn.jsdelivr.net/gh/jscastro76/threebox@v.2.2.2/dist/threebox.css" rel="stylesheet">
 </head>
 
@@ -372,55 +371,59 @@ Non vediamo l’ora di accogliervi tra stand e bancarelle, per un viaggio nel pa
 
 
             <!-- Popups -->
-            <div id="popup1" class="popup" onclick="closePopup(event, 'popup1')">
+            <div id="overlay" onclick="closeAllPopups()"></div>
+            <div id="popup1" class="popup-programma" onclick="closePopup(event, 'popup1')">
                 <div class="popup-content">
-                    <span class="close" onclick="closePopup('popup1')">&times;</span>
-                    <p>Popup content for Friday</p>
+                    <button class="btn close-btn" onclick="closePopup(null, 'popup1')">
+                        <i class="bi bi-x"></i>
+                    </button>
+                    <h1>VENERDI 23 Agosto 2024</h1>
+                    <p>- Accoglienza equipaggi e visitatori;</p>
+                    <p>- Iscrizione evento con consegna bag di benvenuto agli equipaggi;</p>
+                    <p>- Mostra statica auto d'epoca a marchio Volkswagen aperta tutto il giorno;</p>
+                    <p>- Esposizione oggettistica vintage con mercatini di dischi in vinile, abbigliamento, <br>ricambistica Volkswagen e automobilia;</p>
+                    <p>- Free camping aperto a tutti;</p>
+                    <p>- Stand enogastronomici con birra e cocktail, street food con prodotti <br>gastronomici locali (anche vegan e gluten free);</p>
+                    <h4>- Live con: <h3>"Bambole di Pezza", "Il Gruppo"</h3></h4>
+                    <p>- pre/post live vinyl dj set</p>
                 </div>
             </div>
-            <div id="popup2" class="popup" onclick="closePopup(event, 'popup2')">
+            <div id="popup2" class="popup-programma" onclick="closePopup(event, 'popup2')">
                 <div class="popup-content">
-                    <span class="close" onclick="closePopup('popup2')">&times;</span>
-                    <p>Popup content for Saturday</p>
+                    <button class="btn close-btn" onclick="closePopup(null, 'popup2')">
+                        <i class="bi bi-x"></i>
+                    </button>
+                    <h1>SABATO 24 Agosto 2024</h1>
+                        <p>- Accoglienza equipaggi e visitatori;</p>
+                        <p>- Iscrizione evento con consegna bag di benvenuto agli equipaggi;</p>
+                        <p>- Mostra statica auto d'epoca a marchio Volkswagen aperta tutto il giorno;</p>
+                        <p>- Esposizione oggettistica vintage con mercatini di dischi in vinile, abbigliamento, <br>ricambistica Volkswagen e automobilia;</p>
+                        <p>- Free camping aperto a tutti;</p>
+                        <p>- Stand enogastronomici con birra e cocktail, street food con prodotti <br>gastronomici locali (anche vegan e gluten free);</p>
+                        <p>- Workshops a tema volkswagen</p>
+                        <p>- Salita in seggiovia e aperitivo al rifugio</p>
+                        <h4>- Live con: <h3>"The Rock'n'Roll Kamikazes", "The Cleopatras"</h3></h4>
+                        <p>- pre/post live vinyl dj set</p>
                 </div>
             </div>
-            <div id="popup3" class="popup" onclick="closePopup(event, 'popup3')">
+            <div id="popup3" class="popup-programma" onclick="closePopup(event, 'popup3')">
                 <div class="popup-content">
-                    <span class="close" onclick="closePopup('popup3')">&times;</span>
-                    <p>Popup content for Sunday</p>
+                    <button class="btn close-btn" onclick="closePopup(null, 'popup3')">
+                        <i class="bi bi-x"></i>
+                    </button>
+                    <h1>DOMENICA 25 Agosto 2024</h1>
+                        <p>- Accoglienza equipaggi e visitatori;</p>
+                        <p>- Iscrizione evento con consegna bag di benvenuto agli equipaggi;</p>
+                        <p>- Mostra statica auto d'epoca a marchio Volkswagen aperta tutto il giorno;</p>
+                        <p>- Esposizione oggettistica vintage con mercatini di dischi in vinile, abbigliamento, <br>ricambistica Volkswagen e automobilia;</p>
+                        <p>- Stand enogastronomici con birra e cocktail, street food con prodotti <br>gastronomici locali (anche vegan e gluten free);</p>
+                        <p>- Premiazione veicoli ed equipaggi</p>
                 </div>
             </div>
 
+            <!-- COSTO ISCRIZIONE EQUIPAGGIO: 10 euro 
+                 COSTO VISITATORE/SOSTENITORE: 5 euro -->
 
-
-
-            <!--<div class="faq">
-                <div class="faq-item">
-                    <h3>How to purchase one day ticket?</h3>
-                    <p class="answer">Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium
-                        doloremque laudantium, totam rem aperiam eaque ipsa.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>How to purchase a ticket for our team?</h3>
-                    <p class="answer">Answer for team ticket.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Lorem ipsum dolor sit amet?</h3>
-                    <p class="answer">Answer for lorem ipsum.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Duis aute irure dolor in reprehenderit?</h3>
-                    <p class="answer">Answer for duis aute irure.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Aliquip ex ea commodo?</h3>
-                    <p class="answer">Answer for aliquip ex ea commodo.</p>
-                </div>
-            </div>
-            <div class="early-bird">
-                <p>Earlybird Registration Now Open</p>
-            </div>
-        </div>-->
 
     </section>
 
@@ -469,6 +472,14 @@ Non vediamo l’ora di accogliervi tra stand e bancarelle, per un viaggio nel pa
                     <div class="services">
                         <h3>SERVIZI</h3>
                         <div class="lista-servizi">
+                            <!-- Mantieni il tuo spazio pulito, rispetta la natura! -->
+                            <!-- Se porti cibo o bevande, ricorda di usare ocntenitori riutilizzabili, e smaltisci i rifiuti correttamente-->
+                            <!-- La zona dell'evento è ampia, porta la tua bici per migliorare gli spostamenti -->
+                            <!-- Controlla che la tua Volkswagen sia in regola con tutte le normative del codice della strada -->
+                            <!-- Troverai servizi igienici dislocati su più zone dell'area -->
+                            <!-- Non gettare mozziconi di sigarette per terra, per prevenire incendi -->
+                            <!-- Acquista il tuo braccialetto in cassa e accedi a sconti e convenzioni! Sostieni il nostro evento -->
+                            <!-- Abbigliamento consigliato? dal costume alla felpa... siamo in montagna, munisciti di antipioggia in caso di necessità -->
                             <li>Piscina</li>
                             <li>doccia</li>
                             <li>franco</li>
@@ -534,15 +545,16 @@ Non vediamo l’ora di accogliervi tra stand e bancarelle, per un viaggio nel pa
 
     <!-- COME ARRIVARE -->
     <section class="arrivare" id="arrivare">
-        <!--
+
         <div class="map-container bg-danger" id="map-container">
             <div id="map"></div>
             <div class="vignette"></div>
         </div>
-    -->
+        <!--
         <div class="mappasostitutiva">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4843.035168014491!2d14.382872156539678!3d41.46281363135394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133a6497736fd05d%3A0x26094f9bde288844!2s86027%20Campitello%20Matese%2C%20Province%20of%20Campobasso!5e1!3m2!1sen!2sit!4v1722852639705!5m2!1sen!2sit" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
+    -->
     </section>
 
 
@@ -584,45 +596,69 @@ Non vediamo l’ora di accogliervi tra stand e bancarelle, per un viaggio nel pa
                         <h4>La loro partecipazione non solo rende possibile l'evento, ma contribuisce anche a promuovere
                             cultura, arte e solidarietà.</h4>
                     </div>
-                    <a href="mailto:alexpaolantonio@gmail.com?cc=apaolan02k@gmail.com&bcc=civico32alessandro@gmail.com&subject=Mail prova sponsor soulvolks&body=Demo emailao" target="_blank">
+                    <a href="mailto:alexpaolantonio@gmail.com?cc=apaolan02k@gmail.com&bcc=civico32alessandro@gmail.com&subject=Mail prova sponsor soulvolks&body=Demo emailao"
+                        target="_blank">
                         <button class="button-sponsor">CONTATTACI</button>
                     </a>
                 </div>
             </div>
             <div class="div-right">
                 <div class="logo-cloud">
-                    <div class="logo-item"><img src="img/mvc/sponsor/EURODEPUR2000.png" alt="Sponsor Eurodepur 2000"></div>
-                    <div class="logo-item"><img src="img/mvc/sponsor/GRAZIELLA.png" alt="Sponsor Graziella Gioielli"></div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/EURODEPUR2000.png" alt="Sponsor Eurodepur 2000">
+                    </div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/GRAZIELLA.png" alt="Sponsor Graziella Gioielli">
+                    </div>
                     <div class="logo-item"><img src="img/mvc/sponsor/UNCLASSICS.png" alt="Sponsor Unclassics"></div>
                     <div class="logo-item"><img src="img/mvc/sponsor/ZMPGROUP.png" alt="Sponsor ZMP Group"></div>
-                    <div class="logo-item"><img src="img/mvc/sponsor/VENDITTI.png" alt="Sponsor Gestione Industriale Venditti"></div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/VENDITTI.png"
+                            alt="Sponsor Gestione Industriale Venditti"></div>
 
-                    <div class="logo-item"><img src="img/mvc/sponsor/CENTOMETRI.png" alt="Sponsor Centometri Food & More"></div>
-                    <div class="logo-item"><img src="img/mvc/sponsor/EUGENIA.png" alt="Sponsor Cycling Network Eugenia"></div>
-                    <div class="logo-item"><img src="img/mvc/sponsor/HOTELMILETTO.png" alt="Sponsor Hotel Miletto"></div>
-                    <div class="logo-item"><img src="img/mvc/sponsor/KRISTIANIA.png" alt="Sponsor Kristiania - The Family Hotel"></div>
-                    <div class="logo-item"><img src="img/mvc/sponsor/MASTICEPRODUZIONI.png" alt="Sponsor Mastice Produzioni"></div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/CENTOMETRI.png"
+                            alt="Sponsor Centometri Food & More"></div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/EUGENIA.png" alt="Sponsor Cycling Network Eugenia">
+                    </div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/HOTELMILETTO.png" alt="Sponsor Hotel Miletto">
+                    </div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/KRISTIANIA.png"
+                            alt="Sponsor Kristiania - The Family Hotel"></div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/MASTICEPRODUZIONI.png"
+                            alt="Sponsor Mastice Produzioni"></div>
                     <div class="logo-item"><img src="img/mvc/sponsor/MGGARAGE.png" alt="Sponsor MG Garage"></div>
-                    <div class="logo-item"><img src="img/mvc/sponsor/SANNIOSAPORI.png" alt="Sponsor Sannio Sapori - Piacere Sannita"></div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/SANNIOSAPORI.png"
+                            alt="Sponsor Sannio Sapori - Piacere Sannita"></div>
                     <div class="logo-item"><img src="img/mvc/sponsor/SUPERCAR.png" alt="Sponsor Supercar"></div>
-                    <div class="logo-item"><img src="img/mvc/sponsor/TANELLIASSICURAZIONI.png" alt="Sponsor Tanelli Assicurazioni"></div>
-                    <div class="logo-item"><img src="img/mvc/sponsor/ZAPPACOSTA.png" alt="Sponsor Zappacosta Masserie"></div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/TANELLIASSICURAZIONI.png"
+                            alt="Sponsor Tanelli Assicurazioni"></div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/ZAPPACOSTA.png" alt="Sponsor Zappacosta Masserie">
+                    </div>
 
-                    <div class="logo-item"><img src="img/mvc/sponsor/AUTOCLASS.png" alt="Sponsor Auto Class Campobasso"></div>
-                    <div class="logo-item"><img src="img/mvc/sponsor/BIERRECHIMICA.png" alt="Sponsor Bierre Chimica"></div>
-                    <div class="logo-item"><img src="img/mvc/sponsor/CASAOREFICI.png" alt="Sponsor Casa Degli Orefici"></div>
-                    <div class="logo-item"><img src="img/mvc/sponsor/CIVICO32.png" alt="Sponsor Civic32 Studio - Photography\\graphic design"></div>
-                    <div class="logo-item"><img src="img/mvc/sponsor/EVENTIMOLISE.png" alt="Sponsor Eventi Molise"></div>
-                    <div class="logo-item"><img src="img/mvc/sponsor/GLOBALSERVICE.png" alt="Sponsor Global Service di Serago Giuseppe"></div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/AUTOCLASS.png" alt="Sponsor Auto Class Campobasso">
+                    </div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/BIERRECHIMICA.png" alt="Sponsor Bierre Chimica">
+                    </div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/CASAOREFICI.png" alt="Sponsor Casa Degli Orefici">
+                    </div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/CIVICO32.png"
+                            alt="Sponsor Civic32 Studio - Photography\\graphic design"></div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/EVENTIMOLISE.png" alt="Sponsor Eventi Molise">
+                    </div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/GLOBALSERVICE.png"
+                            alt="Sponsor Global Service di Serago Giuseppe"></div>
                     <div class="logo-item"><img src="img/mvc/sponsor/JEZZA.png" alt="Sponsor Rifugio Jezza"></div>
                     <div class="logo-item"><img src="img/mvc/sponsor/LAPINETINA.png" alt="Sponsor La Pinetina"></div>
-                    <div class="logo-item"><img src="img/mvc/sponsor/LOSCIATORE.png" alt="Sponsor Club Hotel Lo Sciatore"></div>
-                    <div class="logo-item"><img src="img/mvc/sponsor/MAGICABULA.png" alt="Sponsor Ludoteca Magicabula"></div>
-                    <div class="logo-item"><img src="img/mvc/sponsor/MASTERCAR.png" alt="Sponsor Master Car Auto Village"></div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/LOSCIATORE.png"
+                            alt="Sponsor Club Hotel Lo Sciatore"></div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/MAGICABULA.png" alt="Sponsor Ludoteca Magicabula">
+                    </div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/MASTERCAR.png"
+                            alt="Sponsor Master Car Auto Village"></div>
                     <div class="logo-item"><img src="img/mvc/sponsor/MGRICAMBI.png" alt="Sponsor MG Ricambi"></div>
-                    <div class="logo-item"><img src="img/mvc/sponsor/RAMACIOTTO.png" alt="Sponsor Ramaciotto - Pasta Fresca Con Cucina"></div>
-                    <div class="logo-item"><img src="img/mvc/sponsor/WALKONWINESPIRITS.png" alt="Sponsor Walk On Wine Spirits"></div>
-                    <div class="logo-item"><img src="img/mvc/sponsor/YOGADELLARIA.png" alt="Sponsor Yoga dell'Aria"></div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/RAMACIOTTO.png"
+                            alt="Sponsor Ramaciotto - Pasta Fresca Con Cucina"></div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/WALKONWINESPIRITS.png"
+                            alt="Sponsor Walk On Wine Spirits"></div>
+                    <div class="logo-item"><img src="img/mvc/sponsor/YOGADELLARIA.png" alt="Sponsor Yoga dell'Aria">
+                    </div>
                 </div>
             </div>
         </div>

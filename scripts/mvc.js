@@ -31,12 +31,35 @@ const interval = setInterval(countdown, 1000);
 //popup programma
 function openPopup(id) {
     document.getElementById(id).style.display = 'flex';
+    document.getElementById('overlay').style.display = 'block';
 }
 function closePopup(event, id) {
-    if (event.target.classList.contains('popup')) {
+    if (event === null || event.target.classList.contains('popup')) {
         document.getElementById(id).style.display = 'none';
+        checkAnyPopupOpen();
     }
 }
+function closeAllPopups() {
+    const popups = document.querySelectorAll('.popup');
+    popups.forEach(popup => {
+        popup.style.display = 'none';
+    });
+    document.getElementById('overlay').style.display = 'none';
+}
+function checkAnyPopupOpen() {
+    const popups = document.querySelectorAll('.popup');
+    let anyOpen = false;
+    popups.forEach(popup => {
+        if (popup.style.display === 'flex') {
+            anyOpen = true;
+        }
+    });
+    if (!anyOpen) {
+        document.getElementById('overlay').style.display = 'none';
+    }
+}
+
+
 
 
 
