@@ -29,13 +29,31 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //MODULO CONTATTI
 document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Previene l'invio del modulo
+
     const accept = document.getElementById('accept').checked;
 
     if (!accept) {
         alert('Devi accettare i termini per inviare il modulo.');
-        event.preventDefault();
+        return;
     }
+
+    const formData = new FormData(this);
+
+    fetch('php/contact_module.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        alert(data); // Mostra il messaggio di risposta del server
+    })
+    .catch(error => {
+        alert('Si è verificato un errore durante l\'invio del modulo.');
+    });
 });
+
+
 
 
 

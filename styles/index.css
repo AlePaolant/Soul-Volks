@@ -78,6 +78,7 @@
     font-size: 3rem;
     font-weight: bold;
     color: #15120d;
+    transform: scaleX(1.2);
 }
 .popup-title h2{
     font-family: "Droid", sans-serif;
@@ -1787,7 +1788,7 @@ textarea {
     position: relative;
     z-index: 1;
 }
-.sfondo-nero-grana {
+.sfondo-nero-grana-isc {
     display: none;
     width: 100%;
     margin-top: 0;
@@ -1991,7 +1992,7 @@ textarea {
         width: 100%;
         top: 0;
     }
-    .sfondo-nero-grana{
+    .sfondo-nero-grana-isc{
         display: flex;
         width: 100%;
     }
