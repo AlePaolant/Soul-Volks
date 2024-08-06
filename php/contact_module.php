@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($name && $email && $message) {
         // Configurazione email
-        $to = 'info@soulvolks.it, alexpaolantonio@gmail.com'; // Indirizzo email destinatario
+        $to = 'info@soulvolks.it, civico32alessandro@gmail.com'; // Indirizzo email destinatario
         $email_subject = 'Nuovo messaggio dal modulo contatti del tuo sito'; // Soggetto fisso
         $email_body = "Nome: $name\nEmail: $email\n\nMessaggio:\n$message"; // Corpo dell'email
 
@@ -25,17 +25,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         try {
             // Configurazione del server SMTP
             $mail->isSMTP();
-            $mail->Host       = 'smtp.aruba.it';
+            $mail->Host       = 'smtps.aruba.it';
             $mail->SMTPAuth   = true;
             $mail->Username   = 'support@soulvolks.it'; // Sostituisci con il tuo indirizzo email
             $mail->Password   = 'SV/modulo23'; // Sostituisci con la tua password
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Abilita TLS
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // Abilita TLS
             $mail->Port       = 465; // Porta SMTP
+
+            //debug
+            $mail->SMTPDebug = 2; // Per il debug verbose
+            $mail->Debugoutput = 'html'; // Per il debug output in HTML
 
             // Impostazioni email
             $mail->setFrom('support@soulvolks.it', 'Webmaster Soul Volks'); // Modifica con il tuo indirizzo email
             $mail->addAddress('info@soulvolks.it'); // Indirizzo email destinatario
-            $mail->addAddress('alexpaolantonio@gmail.com'); // Indirizzo email destinatario aggiuntivo
+            $mail->addAddress('civico32alessandro@gmail.com'); // Indirizzo email destinatario aggiuntivo
             $mail->addReplyTo($email, $name); // Rispondi all'indirizzo email dell'utente
 
             // Contenuto dell'email
