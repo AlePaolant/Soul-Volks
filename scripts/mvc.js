@@ -56,9 +56,8 @@ function checkAnyPopupOpen() {
     });
     if (!anyOpen) {
         document.getElementById('overlay').style.display = 'none';
-    }
+    }   
 }
-
 
 
 
