@@ -6,7 +6,7 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
-    z-index: 10;
+    z-index: 5;
     display: none; /* inizialmente nascosto */
 }
 
@@ -76,8 +76,8 @@
 }
 .popup-title h1{
     font-size: 3rem;
-    font-weight: bold;
     color: #15120d;
+    margin-left: 3.5%;
     transform: scaleX(1.2);
 }
 .popup-title h2{
@@ -153,10 +153,11 @@
     background-color: #79000a;
 }
 
-/* Effetto sfocatura per il resto del sito */
-.blur *:not(#popup-mvc):not(#popup-mvc *) {
+/* Effetto sfocatura per il resto del sito TRANNE COOKIE BANNER */
+.blur *:not(#popup-mvc):not(#popup-mvc *):not(#iubenda-cs-banner):not(#iubenda-cs-banner *):not(#iubenda-iframe):not(#iubenda-iframe *) {
     filter: blur(1px);
 }
+
 @media screen and (max-width: 1200px) {
     #popup-mvc {
         width: 70%;
@@ -781,7 +782,7 @@
     font-style: normal;
     line-height: 0.9;
     color: #15120d;
-    text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+    text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
     display: inline-block;
     transform: scaleX(1.2);
     margin-left: 7%;
@@ -1046,7 +1047,7 @@
     font-style: normal;
     line-height: 0.9;
     color: #15120d;
-    text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+    text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
     display: inline-block;
     transform: scaleX(1.2);
     margin-right: 10%;
@@ -1297,10 +1298,12 @@
     .text-section-sx{
         padding-left: 20px;
         padding-right: 20px;
+        margin-bottom: 0;
     }
     .text-section-dx{
         width: 100%;
         padding: 20px;
+        margin-bottom: 0;
     }
     .iscriversi-title h1 {
         font-size: 5rem;
@@ -1331,6 +1334,7 @@
     }
 
     .iscrivitiorabutton {
+        margin-top: -10%;
         width: 100%;
     }
 
@@ -1377,7 +1381,7 @@
     font-style: normal;
     line-height: 0.9;
     color: #15120d;
-    text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+    text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
     display: inline-block;
     transform: scaleX(1.2);
     margin-bottom: 3.5%;

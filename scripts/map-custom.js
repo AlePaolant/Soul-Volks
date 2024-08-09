@@ -63,8 +63,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const pings = [
         { id: 1, coordinates: [14.390004420801807, 41.46247297109987], title: "Toilette", description: "Servizi igienici NON muniti di docce", icon: "fa-solid fa-restroom" },
-        { id: 2, coordinates: [14.389679455057014, 41.462916030900615], title: "Piscina", description: "Piscina attrezzata per bambini e adulti presso BOOOH", icon: "fa-solid fa-person-swimming" },
-        { id: 3, coordinates: [14.393274383606018, 41.46180476423195], title: "Docce", description: "Servizi igienici E docce presso BOOOH", icon: "fa-solid fa-shower" },
+        { id: 2, coordinates: [14.389679455057014, 41.462916030900615], title: "Piscina", description: "Piscina attrezzata per bambini e adulti", icon: "fa-solid fa-person-swimming" },
+        { id: 3, coordinates: [14.395661020058037, 41.462572769782], title: "Docce", description: "Servizi igienici E docce", icon: "fa-solid fa-shower" },
         { id: 4, coordinates: [14.391613892003754, 41.4620506872846], title: "Cassa", description: "Acquista qui il braccialetto e approfitta dei pacchetti scontati", icon: "fa-regular fa-money-bill-1" },
         { id: 5, coordinates: [14.3916456139858, 41.46129409711963], title: "Quad", description: "Escursione in enduro con i quad? Si, puoi fare anche quello!", icon: "fa-solid fa-truck-monster" },
         { id: 6, coordinates: [14.390267932257878, 41.462007046844946], title: "Street Food", description: "Troverai qui stand enogastronomici locali (anche gluten free e vegani)", icon: "fa-solid fa-utensils" },
