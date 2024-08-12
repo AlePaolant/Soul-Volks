@@ -1,0 +1,54 @@
+Codice creato da Alessandro Paolantonio (AP), tutte le riproduzioni e gli utilizzi non autorizzati sono vietati.
+Per modifiche / bug / errori / informazioni contattare il +39 3274309080
+
+
+
+
+SITEMAP (anti-noob):
+
+index.html -> home page
+matesevolkscamp.html -> event page
+README.md -> file github per presentazione
+robots.txt -> per rendere inaccessibile la cartella private
+sitemap.xml -> sitemap per indicizzazione
+> docs -> contiene pdf modulo iscrizione al club
+> fonts -> contiene font custom installati nel server (Droid, Times Sans)
+> img > icons -> contiene tutte le icone + og 
+      > home -> contiene tutte le immagini per index.html
+      > mvc -> contiene tutte le immagini per matesevolkscamp.html
+      sfuse ci sono immagini generali per entrambe le pagine (logo navbar e footer)
+> php > phpmailer -> installazione di phpmailer per facilitare invio mail
+      sfusi ci sono:    test.php -> file di test dei moduli
+                        contact_module.php -> file per modulo contatti in index.html
+                        verify_recaptcha.php -> file per download modulo iscrizione in index.html (non contiene recaptcha perchè è stato rimosso)
+> private -> contiene cose private non accessibili (esempi di keywords e appunti privati)          
+> scripts -> contiene files di script in js:
+            general.js -> usa jquery, contiene script per navbar e footer e copyright annuale
+            index.js -> funzioni js per index.html
+            map-custom-working.js -> funzione mapbox originale per mappa (obsoleta)
+            map-custom.js -> funzione mapbox per mappa funzionante (attuale)
+            mvc.js -> funzioni js per matesevolkscamp.html
+> styles -> contiene fogli di stile in css:
+            general.css -> contiene stile generale tra cui navbar e footer (+html e body)
+            index.css -> contiene stile per index.html
+            mvc.css -> contiene stile per matesevolkscamp.html
+
+
+
+SERVER:
+aruba linux -> apache 
+file transfer protocol address -> ftp.soulvolks.it
+porta -> 21
+nome utente e password: chiedere al proprietario (AP)
+è stata fatta modifica DNS per consentire a Google search console di analizzare il sito
+
+WEBMAIL:
+postmaster@soulvolks.it -> serve a gestire la webmail (accesso: solo AP)
+info@soulvolks.it -> riceve comunicazioni dal sito (accesso: membri club con pw)
+support@soulvolks.it -> serve a far funzionare il modulo con phpmailer (accesso: solo AP)
+
+COOKIES:
+usato iubenda, accesso account personale AP
+
+GOOGLE SEARCH CONSOLE: account privato di AP
+GOOGLE ANALYTICS 4: account privato di AP

@@ -1,3 +1,4 @@
 User-agent: *
 Disallow: /private/
-Sitemap: http://www.iltuosito.com/sitemap.xml
+Disallow: /README.md
+Sitemap: http://www.soulvolks.it/sitemap.xml
