@@ -81,6 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { id: 17, coordinates: [14.390920076803644, 41.46126256734185], title: "Posteggio VW 3", description: "Qui troverai una serie di veicoli a marchio Volkswagen", icon: "fa-solid fa-van-shuttle" },
         { id: 18, coordinates: [14.394193101307708, 41.46103848639108], title: "Parcheggio generale", description: "Non hai un veicolo Volkswagen? C'è parcheggio anche per te!", icon: "fa-solid fa-square-parking" },
         { id: 19, coordinates: [14.389074572422766, 41.45837872202196], title: "Seggiovia", description: "Da qui si sale per la vetta! (Sabato 24)", icon: "fa-solid fa-cable-car" },
+        { id: 20, coordinates: [14.392985377564617, 41.462451592892336], title: "Minimarket", description: "Qui troverai tutto ciò di cui hai bisogno!", icon: "fa-solid fa-shop" },
         { id: 20, coordinates: [14.392443434984779, 41.46178714431332], title: "Ingresso", description: "Si entra da qui!", icon: "fa-solid fa-map-pin" }
     ];
 

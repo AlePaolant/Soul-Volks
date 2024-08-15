@@ -44,8 +44,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $to = 'alexpaolantonio@gmail.com';
         $subject = 'DOWNLOAD MODULO ISCRIZIONE DAL SITO';
         $message = $user_email . ' ha scaricato il modulo di iscrizione al tuo club!';
-        $headers = 'From: webmaster@example.com' . "\r\n" .
-                   'Reply-To: webmaster@example.com' . "\r\n" .
+        $headers = 'From: support@soulvolks.it' . "\r\n" .
+                   'Reply-To: suport@soulvolks.it' . "\r\n" .
                    'X-Mailer: PHP/' . phpversion();
 
         mail($to, $subject, $message, $headers);
