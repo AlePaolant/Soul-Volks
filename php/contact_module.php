@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $mail->Port       = 465; // Porta SMTP
 
             //debug
-            $mail->SMTPDebug = 2; // Per il debug verbose
+            $mail->SMTPDebug = 0; // IMPOSTA 2 per il debug verbose 
             $mail->Debugoutput = 'html'; // Per il debug output in HTML
 
             // Impostazioni email
