@@ -451,6 +451,12 @@
 }
 
 @media (max-width: 768px) {
+    .eventi-passati{
+        height: fit-content;
+    }
+    .evento-foto{
+        flex: 0.2; 
+    }
     .evento {
         flex-direction: column;
         width: 95%;
@@ -477,9 +483,6 @@
     }
     .evento-btn{
         padding: 1rem; 
-    }
-    .evento-foto{
-        display: none;
     }
     .eventi-passati-titolo{
         width: 85%;
