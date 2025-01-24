@@ -226,7 +226,7 @@
 .eventi-passati {
     position: relative;
     width: 100vw;
-    height: 140vh;
+    height: fit-content;
     overflow: hidden;
     background-color: #fefbf6;
     display: flex;

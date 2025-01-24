@@ -17,12 +17,20 @@
         <priority>0.9</priority>
     </url>
 
+    <!-- Pagina Fuori Fase 2024 -->
+    <url>
+        <loc>https://www.soulvolks.it/eventi/fuori_fase_2024.html</loc>
+        <lastmod>2025-01-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
     <!-- Pagina Bugs Weekend 2024 -->
     <url>
         <loc>https://www.soulvolks.it/eventi/bugs_weekend_2024.html</loc>
         <lastmod>2025-01-23</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
+        <priority>0.5</priority>
     </url>
 
     <!-- Pagina Gallery mvc 2024 -->
