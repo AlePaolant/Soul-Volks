@@ -60,7 +60,7 @@
     
     <!-- Sezione mappa evento -->
     <url>
-        <loc>https://www.soulvolks.it/matesevolkscamp.html#arrivare</loc>
+        <loc>https://www.soulvolks.it/eventi/matesevolkscamp2024.html#arrivare</loc>
         <lastmod>2024-08-12</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -68,7 +68,7 @@
 
     <!-- Sezione FAQ evento -->
     <url>
-        <loc>https://www.soulvolks.it/matesevolkscamp.html#FAQ</loc>
+        <loc>https://www.soulvolks.it/eventi/matesevolkscamp2024.html#FAQ</loc>
         <lastmod>2024-08-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.4</priority>
