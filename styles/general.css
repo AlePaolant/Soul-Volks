@@ -27,6 +27,7 @@
     font-style: normal;
     font-display: swap;
 }
+
 html {
     overflow-x: hidden;
 }
@@ -284,7 +285,6 @@ a:hover {
     text-transform: uppercase;
     color: #ebe9e4
 }
-
 .footer-social li {
     list-style: none;
     margin: 0 10px 10px 0;
