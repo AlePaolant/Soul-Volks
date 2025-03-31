@@ -28,7 +28,7 @@ $(document).ready(function() {
             }
         }
 
-        if (scroll > 350) {
+        if (scroll > 400) {
             if (!navbar.hasClass('mostra')) {
                 navbar.addClass('mostra');
             }

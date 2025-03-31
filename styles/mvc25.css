@@ -1,11 +1,13 @@
 /* MODIFICHE NAVBAR */
 @media screen and (max-width: 991px) {
     .navbar {
-        background: #efeed7 !important;
+        background: transparent !important;
     }
 }
 .navbar{
     z-index: 20 !important;
+    position: fixed !important;
+    transition: none;
 }
 .navbar .navbar-nav > .nav-item > .nav-link {
     color: #fff !important;
@@ -19,6 +21,23 @@
 .navbar.scrolled {
     background: #0A041B !important;
 }
+.navbar-toggler-icon {
+    filter: brightness(0) invert(1); /* Rende l'icona hamburger bianca */
+}
+@media screen and (max-width: 991px) {
+    .navbar-collapse {
+        background: #0A041B;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+    .navbar.navbar-open {
+        background: #0A041B !important; 
+    }
+}
+
 
 
 
@@ -77,9 +96,88 @@
     font-size: 1.5rem;
     color: #fff;
 }
+@media screen and (max-width: 1400px) {
+    .main-title {
+        left: 10%;
+        margin-top: 7%;
+    }
+    .main-title h1 {
+        font-size: 4.5rem;
+    }
+    .main-title p {
+        font-size: 1.5rem;
+    }
 
+}
+@media screen and (max-width: 1200px) {
+    .main-title {
+        left: 8%;
+        margin-top: 8%;
+    }
+    .main-title h1 {
+        font-size: 4rem;
+    }
+    .main-title p {
+        font-size: 1.2rem;
+    }
+    .background { transform: scale(1.2) translateY(0); }
+    .clouds-background { transform: scale(1.2) translateY(0); }
+    .mountains { transform: scale(1.2) translateY(40px); }
+    .ground { transform: scale(1.4) translateX(0); }
+    .trees-sx { transform: scale(1.4) translateX(100px); }
+    .foreground { transform: scale(1.4) translateX(125px); }
+    .t1 { transform: scale(1.4) translateX(15px); }
+    .trees-dx { transform: scale(1.4) translateX(-40px); }
+    .mongolfiera { transform: scale(1.3) translateX(-120px) translateY(20px);}
+}
+@media screen and (max-width: 991px) {
+    .main-title {
+        left: 5%;
+        margin-top: 8%;
+    }
+    .background { transform: scale(1.4) translateY(0); }
+    .clouds-background { transform: scale(1.4) translateY(0); }
+    .mountains { transform: scale(1.4) translateY(40px); }
+    .ground { transform: scale(1.7) translateX(0); }
+    .trees-sx { transform: scale(1.7) translateX(130px) translateY(10px); }
+    .foreground { transform: scale(1.7) translateX(170px); }
+    .t1 { transform: scale(1.5) translateX(30px) translateY(30px); }
+    .trees-dx { transform: scale(1.7) translateX(-40px); }
+    .mongolfiera { transform: scale(1.7) translateX(-180px) translateY(40px);}
+}
+@media screen and (max-width: 768px) {
+    
+}
+@media screen and (max-width: 576px) {
+    .parallax-container {
+        height: 80vh;
+    }
+    .main-title {
+        text-align: center;
+        left: 0;
+        margin-top: 15%;
+    }
+    .main-title h1 {
+        font-size: 4rem;
+    }
+    .main-title p {
+        font-size: 1.2rem;
+    }
+    .background { transform: scale(3) translateY(60px); }
+    .clouds-background { transform: scale(2.5) translateX(-70px) translateY(60px); }
+    .mountains { transform: scale(4) translateX(-40px) translateY(90px); }
+    .ground { transform: scale(2.5) translateX(30px) translateY(70px); }
+    .trees-sx { transform: scale(3) translateX(0) translateY(0); }
+    .foreground { transform: scale(4) translateX(-10px); }
+    .t1 { transform: scale(3) translateX(-45px) translateY(40px); }
+    .trees-dx { transform: scale(3) translateX(0); }
+    .mongolfiera { transform: scale(1.3) translateX(0) translateY(0);}
+}
+@media screen and (max-width: 375px) {
+    
+}
 
-/* MOBILE: Usa un'immagine fissa per evitare problemi */
+/* MOBILE: Usare un'immagine fissa per evitare problemi
 @media (max-width: 768px) {
     .parallax-container {
         background: url('static-mobile.jpg') no-repeat center center / contain;
@@ -87,7 +185,7 @@
     }
     .layer { display: none; }
 }
-
+ */
 
 
 /* EVENTO */
@@ -102,6 +200,66 @@
     justify-content: flex-start;
     align-items: center;
     z-index: 15; /* La mantiene sopra il parallasse */
+    overflow: hidden;
+}
+.more {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    text-align: center;
+    align-items: center;
+    margin-top: 10%;
+    gap: 50px;
+}
+.more h1{
+    font-family: "Bungee", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5rem;
+    color: #fff;
+    line-height: 0.9;
+}
+.more p{
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    color: #fff;
+}
+.social-icons{
+    display: flex;
+    text-align: center;
+    gap: 40px;
+}
+.social-icons a{
+    color: #fff;
+    font-size: 4rem;
+}
+
+@media screen and (max-width: 1400px) {
+    .evento {
+        margin-top: -10vh;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .evento {
+        margin-top: -10vh;
+    }
+    .more h1{
+        font-size: 2rem;
+    }
+    .more p{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 576px) {
+    .evento {
+        margin-top: -7vh;
+        height: 55vh;
+    }
+    .social-icons a{
+        font-size: 2rem;
+    }  
 }
 .programma {
     position: relative;

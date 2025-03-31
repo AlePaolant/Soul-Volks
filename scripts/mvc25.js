@@ -18,4 +18,23 @@ $(document).ready(function() {
         $(".mongolfiera").css("top", scrollTop * 0.6 + "px");
         $(".main-title").css("top", scrollTop * 0.8 + "px");
     });
+
+    // Funzione MODIFICATA per chiudere il menu dopo il clic su un link (hamburger)
+    $(document).ready(function() {
+        $('.navbar-toggler').on('click', function() {
+            $('.navbar').toggleClass('navbar-open');
+        });
+    
+        // Chiude il menu quando si clicca su un link
+        $('.navbar-nav a').on('click', function() {
+            $('.navbar-collapse').collapse('hide');
+            $('.navbar').removeClass('navbar-open');
+        });
+    });
+    
 });
+
+
+
+//Anno per copyright
+document.getElementById("year").textContent = new Date().getFullYear();
