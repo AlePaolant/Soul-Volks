@@ -189,7 +189,7 @@
  */
 
 
-/* EVENTO */
+/* SEZIONE EVENTO */
 .evento {
     position: relative;
     width: 100vw;
@@ -200,9 +200,50 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    z-index: 15; /* La mantiene sopra il parallasse */
     overflow: hidden;
 }
+.evento .content{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    max-width: 900px;
+    padding: 40px;
+    border-radius: 12px;
+    align-items: center;
+    justify-content: center;
+}
+.content .top-section{
+    text-align: center;
+}
+.top-section h3 {
+    margin: 0;
+    font-size: 2rem;
+    color: #f2f2f2;
+}
+.top-section h1 {
+    margin: 10px 0;
+    font-size: 4rem;
+    color: #FEBC5E;
+}
+.top-section p {
+    margin: 0;
+    color: #fa7407;
+}
+.content .grid-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+.grid-section .grid-item {
+    display: flex;
+    width: 30%;
+    min-width: 250px;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
 .more {
     display: flex;
     flex-direction: column;
@@ -237,6 +278,8 @@
     font-size: 4rem;
 }
 
+
+
 @media screen and (max-width: 1400px) {
     .evento {
         margin-top: -10vh;
@@ -262,18 +305,67 @@
         font-size: 2rem;
     }  
 }
+
+
+/* SEZIONE PROGRAMMA */
 .programma {
     position: relative;
     width: 100vw;
     height: 100vh; /* Stessa altezza della sezione parallax */
-    margin-top: 0vh; /* Evita il buco tra le sezioni */
-    background-color: #f2f2f2;
+    margin-top: 0; /* Evita il buco tra le sezioni */
+    background-color: #0A041B;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    z-index: 15; /* La mantiene sopra il parallasse */
 }
+.programma .container {
+    position: relative;
+    width: 100%; /* adattare bene */
+    scale: 1.2;
+    height: auto;
+    cursor: pointer;
+    padding: 0;
+}
+.programma .container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+#t1-aperto {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(1);
+}
+.programma .text-overlay {
+    position: absolute;
+    margin-top: 23%;
+    right: 3.5%;
+    top: 20%;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    pointer-events: none;
+}
+.programma .show {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+
+
+
+
+/* SEZIONE SPONSOR */
 .sponsor {
     position: relative;
     width: 100vw;

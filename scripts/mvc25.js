@@ -48,6 +48,36 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', onScroll, { passive: true });
 });
 
+let isAperto = false;
+
+function toggleT1() {
+    const chiuso = document.getElementById('t1-chiuso');
+    const aperto = document.getElementById('t1-aperto');
+    const testo = document.getElementById('text');
+
+    if (!isAperto) {
+        // Apri
+        chiuso.style.opacity = '0';
+        chiuso.style.pointerEvents = 'none';
+
+        aperto.style.opacity = '1';
+        aperto.style.pointerEvents = 'auto';
+
+        setTimeout(() => {
+            testo.classList.add('show');
+        }, 300);
+    } else {
+        // Chiudi
+        aperto.style.opacity = '0';
+        aperto.style.pointerEvents = 'none';
+
+        chiuso.style.opacity = '1';
+        chiuso.style.pointerEvents = 'auto';
+
+        testo.classList.remove('show');
+    }
+    isAperto = !isAperto;
+}
 
 
 //Anno per copyright
