@@ -1,37 +1,51 @@
-$(document).ready(function() {
-    $(window).on("scroll", function() {
-        var scrollTop = $(window).scrollTop();
-        
-        // valore alto = velocità alta - valore basso = velocità bassa
-        $(".background").css("top", scrollTop * 0.8 + "px");
-        $(".clouds-background").css("top", scrollTop * 0.7 + "px");
-        $(".mountains").css("top", scrollTop * 0.8 + "px");
-        $(".ground").css("top", scrollTop * 0.4 + "px");
-        $(".trees-sx").css("top", scrollTop * 0.4 + "px");
-        $(".foreground").css("top", scrollTop * 0.01 + "px"); 
-        $(".t1").css("top", scrollTop * 0.05 + "px");
-        $(".trees-dx").css("top", scrollTop * 0.3 + "px");
-        $(".cloud-front-1").css("top", scrollTop * 0.3 + "px");
-        $(".cloud-front-2").css("top", scrollTop * 0.35 + "px");
-        $(".cloud-front-3").css("top", scrollTop * 0.25 + "px");
-        $(".cloud-front-4").css("top", scrollTop * 0.3 + "px");
-        $(".mongolfiera").css("top", scrollTop * 0.6 + "px");
-        $(".main-title").css("top", scrollTop * 0.8 + "px");
-    });
+document.addEventListener('DOMContentLoaded', function () {
+    const layers = [
+        { selector: '.background', speed: 0.8 },
+        { selector: '.clouds-background', speed: 0.7 },
+        { selector: '.mountains', speed: 0.8 },
+        { selector: '.ground', speed: 0.4 },
+        { selector: '.trees-sx', speed: 0.4 },
+        { selector: '.foreground', speed: 0.01 },
+        { selector: '.t1', speed: 0.05 },
+        { selector: '.trees-dx', speed: 0.3 },
+        { selector: '.cloud-front-1', speed: 0.3 },
+        { selector: '.cloud-front-2', speed: 0.35 },
+        { selector: '.cloud-front-3', speed: 0.25 },
+        { selector: '.cloud-front-4', speed: 0.3 },
+        { selector: '.mongolfiera', speed: 0.6 },
+        { selector: '.main-title', speed: 0.8 }
+    ];
 
-    // Funzione MODIFICATA per chiudere il menu dopo il clic su un link (hamburger)
-    $(document).ready(function() {
-        $('.navbar-toggler').on('click', function() {
-            $('.navbar').toggleClass('navbar-open');
+    const elements = layers.map(layer => ({
+        el: document.querySelector(layer.selector),
+        speed: layer.speed
+    }));
+
+    let latestScrollY = 0;
+    let ticking = false;
+
+    function onScroll() {
+        latestScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(updatePositions);
+            ticking = true;
+        }
+    }
+
+    function updatePositions() {
+        elements.forEach(item => {
+            if (item.el) {
+                item.el.style.transform = `translateY(${latestScrollY * item.speed}px)`;
+            }
         });
-    
-        // Chiude il menu quando si clicca su un link
-        $('.navbar-nav a').on('click', function() {
-            $('.navbar-collapse').collapse('hide');
-            $('.navbar').removeClass('navbar-open');
-        });
-    });
-    
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
 });
 
 
