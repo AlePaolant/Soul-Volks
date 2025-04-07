@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('overlay').style.display = 'block';
         document.getElementById('popup-mvc').style.display = 'block';
         document.body.classList.add('blur');
-    }, 10000);
+    }, 3500);
 
     function closePopup() {
         document.getElementById('overlay').style.display = 'none';
