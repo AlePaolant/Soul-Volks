@@ -80,5 +80,22 @@ function toggleT1() {
 }
 
 
+const tipoSelect = document.getElementById('tipo');
+    const sezioni = {
+      sponsor: document.getElementById('sezioneSponsor'),
+      espositore: document.getElementById('sezioneEspositore'),
+      food: document.getElementById('sezioneFood'),
+      attivita: document.getElementById('sezioneAttivita'),
+      staff: document.getElementById('sezioneStaff'),
+    };
+
+    tipoSelect.addEventListener('change', function () {
+      Object.values(sezioni).forEach(sec => sec.classList.add('hidden'));
+      const scelta = tipoSelect.value;
+      if (sezioni[scelta]) {
+        sezioni[scelta].classList.remove('hidden');
+      }
+    });
+
 //Anno per copyright
 document.getElementById("year").textContent = new Date().getFullYear();
