@@ -84,7 +84,7 @@ $(document).ready(function () {
     });
 
     // AJAX invio modulo sponsor
-    $('#moduloSponsor').on('submit', function (e) {
+    $('#partnerForm').on('submit', function (e) {
         e.preventDefault(); // impedisce il refresh
 
         $.ajax({

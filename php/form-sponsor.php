@@ -75,7 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail->setFrom('support@soulvolks.it', 'Webmaster Soul Volks');
         $mail->addAddress('info@soulvolks.it'); // Indirizzo email destinatario
         $mail->addAddress('civico32alessandro@gmail.com'); // Indirizzo email destinatario aggiuntivo
-        $mail->addReplyTo($email, $name); // Rispondi all'indirizzo email dell'utente
+        $mail->addReplyTo($email, $nome); // Rispondi all'indirizzo email dell'utente
 
         // Contenuto
         $mail->isHTML(true);
