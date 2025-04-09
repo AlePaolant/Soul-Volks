@@ -1,6 +1,6 @@
 <?php
 // Carica PHPMailer
-require 'PHPMailer/src/PHPMailer.php'; 
+require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
 require 'PHPMailer/src/Exception.php';
 
@@ -11,10 +11,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (!isset($_POST['privacy'])) {
         exit("Devi accettare il trattamento dei dati per inviare il modulo.");
-    }    
+    }
 
     // Sanitizzazione dei dati
-    function sanitize($data) {
+    function sanitize($data)
+    {
         return htmlspecialchars(strip_tags(trim($data)));
     }
     // Recupera i dati dal form
@@ -83,17 +84,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $mail->send();
 
-        // Messaggio di conferma (puoi fare anche un redirect con header())
-        echo "<div style='padding:2rem;font-family:sans-serif;text-align:center;'>
-                <h2>Grazie per la tua proposta!</h2>
-                <p>Ti contatteremo il prima possibile.</p>
-                <a href='matesevolkscamp2025.html'>Torna al sito</a>
-            </div>";
-
+        http_response_code(200);
+        echo "Messaggio inviato con successo!";
     } catch (Exception $e) {
+        http_response_code(500);
         echo "Errore nell'invio: {$mail->ErrorInfo}";
     }
 } else {
-    echo 'Metodo di richiesta non valido.';
+    http_response_code(405); // metodo non consentito
+    echo 'Metodo non valido.';
 }
-?>

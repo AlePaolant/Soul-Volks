@@ -81,10 +81,7 @@
     <link rel="preload" as="image" href="../img/events/mvc-25/parallax/foreground.png">
     <link rel="preload" as="image" href="../img/events/mvc-25/parallax/t1.png">
     <link rel="preload" as="image" href="../img/events/mvc-25/parallax/trees-dx.png">
-    <link rel="preload" as="image" href="../img/events/mvc-25/parallax/cloud-front-1.png">
-    <link rel="preload" as="image" href="../img/events/mvc-25/parallax/cloud-front-2.png">
-    <link rel="preload" as="image" href="../img/events/mvc-25/parallax/cloud-front-3.png">
-    <link rel="preload" as="image" href="../img/events/mvc-25/parallax/cloud-front-4.png">
+    <link rel="preload" as="image" href="../img/events/mvc-25/parallax/cloud-front.png">
     <link rel="preload" as="image" href="../img/events/mvc-25/parallax/mongolfiera.png">
 
     <!-- COOKIE BANNER -->
@@ -152,10 +149,7 @@
             <img src="../img/events/mvc-25/parallax/foreground.png" class="layer foreground">
             <img src="../img/events/mvc-25/parallax/t1.png" class="layer t1">
             <img src="../img/events/mvc-25/parallax/trees-dx.png" class="layer trees-dx">
-            <img src="../img/events/mvc-25/parallax/cloud-front-1.png" class="layer cloud-front-1">
-            <img src="../img/events/mvc-25/parallax/cloud-front-2.png" class="layer cloud-front-2">
-            <img src="../img/events/mvc-25/parallax/cloud-front-3.png" class="layer cloud-front-3">
-            <img src="../img/events/mvc-25/parallax/cloud-front-4.png" class="layer cloud-front-4">
+            <img src="../img/events/mvc-25/parallax/cloud-front.png" class="layer cloud-front">
             <img src="../img/events/mvc-25/parallax/mongolfiera.png" class="layer mongolfiera">
         </div>
     </section>
@@ -238,49 +232,13 @@
 
     <!-- SEZIONE PROGRAMMA -->
     <section class="programma" id="programma">
+        <h1>PROGRAMMA e LINE-UP</h1>
+        <p>Dove? Clicca sul T1!</p>
         <div class="container" onclick="toggleT1()">
             <img id="t1-chiuso" src="../img/events/mvc-25/T1-BETA-CLOSED.png" alt="T1 Vectorial Drawing Closed ">
-            <img id="t1-aperto" src="../img/events/mvc-25/T1-BETA-OPEN.png" alt="T1 Vectorial Drawing Open">
-            <div id="text" class="text-overlay">PROGRAMMA E LINEUP <br>SARANNO ANNUNCIATI <br>A BREVE</div>
+            <img id="t1-aperto" src="../img/events/mvc-25/T1-BETA-OPEN-INFOv1.png" alt="T1 Vectorial Drawing Open">
         </div>
     </section>
-
-
-
-    <!-- 
-    APPUNTI PER COSA SCRIVERE:
-
-        Seconda edizione del festival
-        breve descrizione 
-        
-
-        aereo con "THE SOUTHERN VW FEST"
-
-        (fare un T1 che si apre lateralmente: clicca per scoprire il programma. poi popup che dice: )
-        IL PROGRAMMA E IL LINE-UP SARA' ANNUNCIATO A BREVE, Seguici per non perderti le novità
-
-
-
-        Diventa parte del festival (sezione per sponsor/contributori)
-        Cerchiamo sponsor:
-        offriamo i seguenti pacchetti:
-                    - logo su sito social e materiali
-                    - stand dedicato
-                    - naming di aree (es. Food Zone by Brand)
-        
-        Cerchiamo espositori unici:
-                    - prezzo stand, inclusione nelle promo social
-        Vuoi portare il tuo food truck o chiosco?
-                    - Info tecniche
-                    - specificare tipo di cucina ovviamente
-        PROPOSTE COLLABORAZIONI:
-            hai un'idea per l'evento? Scrivici! (workshop, attività sportive, ecc...)
-        
-        
-
-        INSERIRE DA QUALCHE PARTE QUALCHE FOTO DELL'ANNO SCORSO???
-
-        parte contatti e social-->
 
     <!-- SEZIONE SPONSOR -->
     <section class="sponsor" id="sponsor">
@@ -291,21 +249,17 @@
 
         <div class="container">
             <div class="row g-5">
-                <!-- Colonna sinistra: descrizioni -->
                 <div class="col-md-6 descrizioni">
                     <h4>Chi stiamo cercando?</h4>
                     <ul class="list-unstyled">
-                        <li><strong>Sponsor</strong>: Vuoi promuovere il tuo brand durante l’evento? Offriamo visibilità su materiali, social e spazi dedicati. Scrivici cosa hai in mente!</li>
+                        <li><strong>Sponsor</strong>: Promuovi il tuo brand: offriamo visibilità su materiali, social e spazi dedicati. Scrivici cosa hai in mente!</li>
                         <li><strong>Espositori</strong>: Hai un’attività artigianale o creativa? Puoi partecipare con uno stand o un banchetto per mostrare e vendere i tuoi prodotti.</li>
                         <li><strong>Food Truck & Street Food</strong>: Gestisci un food truck, chiosco o cucini street food? Dicci che tipo di cucina offri e se hai esigenze particolari.</li>
                         <li><strong>Workshop / Attività</strong>: Vuoi proporre un’attività, un laboratorio, qualcosa di originale? Sport, musica, giochi… siamo curiosi di saperne di più!</li>
-                        <li><strong>Staff / Volontari</strong>: Vuoi aiutarci durante l’evento? Logistica, accoglienza, supporto generale: ogni mano è preziosa, anche solo per qualche ora.</li>
-                        <li><strong>Altro</strong>: Hai un’idea fuori dagli schemi? Proponila! Siamo aperti a suggerimenti e nuove collaborazioni.</li>
-                    </ul>
+                        <li><strong>Staff / Volontari</strong>: Logistica, accoglienza, supporto generale: ogni mano è preziosa, anche solo per qualche ora.</li>                    </ul>
                     <p>Compila il modulo per farci sapere come vuoi partecipare. Sarai ricontattato il prima possibile!</p>
                 </div>
 
-                <!-- Colonna destra: form in card -->
                 <div class="col-md-6">
                     <div class="card p-4">
                         <form id="partnerForm" method="POST" action="../php/form-sponsor.php">
@@ -322,7 +276,6 @@
                                 </select>
                             </div>
 
-                            <!-- Campi comuni -->
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label class="form-label">Nome attività</label>
@@ -344,7 +297,6 @@
                                 </div>
                             </div>
 
-                            <!-- Sezioni dinamiche -->
                             <div id="sezioneSponsor" class="hidden">
                                 <div class="mb-3">
                                     <label class="form-label">Tipo sponsorizzazione</label>
@@ -393,6 +345,9 @@
                                 </label>
                             </div>
 
+                            <div id="messaggioConferma" class="alert alert-success d-none">
+                                Il tuo messaggio è stato inviato, ti ricontatteremo presto!
+                            </div>
 
                             <button type="submit" class="btn w-100">Invia la tua proposta</button>
                         </form>
@@ -403,9 +358,29 @@
     </section>
 
     <section class="inostrisponsor" id="inostrisponsor">
-        
+        <h1 class="powered-sponsor">Powered by:</h1>
+        <div class="sponsor-container">
+            <img src="../img/events/mvc-25/sponsor/CIVICO32.png" alt="Sponsor Civico32studio">
+            <img src="../img/events/mvc-25/sponsor/UNCLASSICS.png" alt="Sponsor UNCLASSICS">
+            <img src="../img/events/mvc-25/sponsor/VENDITTI.png" alt="Sponsor VENDITTI">
+            <img src="../img/events/mvc-25/sponsor/ZMPGROUP.png" alt="Sponsor ZMPGROUP">
+            <!--
+            <img src="sponsor/logo5.png" alt="Sponsor 5">
+            <img src="sponsor/logo6.png" alt="Sponsor 6">
+            <img src="sponsor/logo7.png" alt="Sponsor 7">
+            <img src="sponsor/logo8.png" alt="Sponsor 8">
+            <img src="sponsor/logo9.png" alt="Sponsor 9">
+            <img src="sponsor/logo10.png" alt="Sponsor 10">
+            <img src="sponsor/logo11.png" alt="Sponsor 11">
+            <img src="sponsor/logo12.png" alt="Sponsor 12">
+            <img src="sponsor/logo13.png" alt="Sponsor 13">
+            <img src="sponsor/logo14.png" alt="Sponsor 14">
+            <img src="sponsor/logo15.png" alt="Sponsor 15">
+            <img src="sponsor/logo16.png" alt="Sponsor 16">
+            -->
+          </div>
     </section>
-    <!-- FOOTER -->
+    <!--FOOTER -->
     <footer class="footer">
         <div class="container">
             <div class="row mb-5">
@@ -481,7 +456,6 @@
             </div>
         </div>
     </footer>
-
 
 
     <!-- Scripts -->

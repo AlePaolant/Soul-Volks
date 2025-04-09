@@ -1,101 +1,88 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const layers = [
-        { selector: '.background', speed: 0.8 },
-        { selector: '.clouds-background', speed: 0.7 },
-        { selector: '.mountains', speed: 0.8 },
-        { selector: '.ground', speed: 0.4 },
-        { selector: '.trees-sx', speed: 0.4 },
-        { selector: '.foreground', speed: 0.01 },
-        { selector: '.t1', speed: 0.05 },
-        { selector: '.trees-dx', speed: 0.3 },
-        { selector: '.cloud-front-1', speed: 0.3 },
-        { selector: '.cloud-front-2', speed: 0.35 },
-        { selector: '.cloud-front-3', speed: 0.25 },
-        { selector: '.cloud-front-4', speed: 0.3 },
-        { selector: '.mongolfiera', speed: 0.6 },
-        { selector: '.main-title', speed: 0.8 }
-    ];
-
-    const elements = layers.map(layer => ({
-        el: document.querySelector(layer.selector),
-        speed: layer.speed
-    }));
-
-    let latestScrollY = 0;
-    let ticking = false;
-
-    function onScroll() {
-        latestScrollY = window.scrollY;
-        requestTick();
-    }
-
-    function requestTick() {
-        if (!ticking) {
-            requestAnimationFrame(updatePositions);
-            ticking = true;
-        }
-    }
-
-    function updatePositions() {
-        elements.forEach(item => {
-            if (item.el) {
-                item.el.style.transform = `translateY(${latestScrollY * item.speed}px)`;
-            }
-        });
-        ticking = false;
-    }
-
-    window.addEventListener('scroll', onScroll, { passive: true });
-});
-
 let isAperto = false;
 
+const tipoSelect = document.getElementById('tipo');
+const sezioni = {
+    sponsor: document.getElementById('sezioneSponsor'),
+    espositore: document.getElementById('sezioneEspositore'),
+    food: document.getElementById('sezioneFood'),
+    attivita: document.getElementById('sezioneAttivita'),
+    staff: document.getElementById('sezioneStaff'),
+};
+tipoSelect.addEventListener('change', function () {
+    Object.values(sezioni).forEach(sec => sec.classList.add('hidden'));
+    const scelta = tipoSelect.value;
+    if (sezioni[scelta]) {
+        sezioni[scelta].classList.remove('hidden');
+    }
+});
+
+//funzione parallasse 
+$(document).ready(function() {
+    $(window).on("scroll", function() {
+        var scrollTop = $(window).scrollTop();
+        
+        $(".background").css("top", scrollTop * 0.8 + "px");
+        $(".clouds-background").css("top", scrollTop * 0.7 + "px");
+        $(".mountains").css("top", scrollTop * 0.8 + "px");
+        $(".ground").css("top", scrollTop * 0.4 + "px");
+        $(".trees-sx").css("top", scrollTop * 0.4 + "px");
+        $(".foreground").css("top", scrollTop * 0.4 + "px"); 
+        $(".t1").css("top", scrollTop * 0.4 + "px");
+        $(".trees-dx").css("top", scrollTop * 0.4 + "px");
+        $(".cloud-front").css("top", scrollTop * 0.3 + "px");
+        $(".mongolfiera").css("top", scrollTop * 0.6 + "px");
+        $(".main-title").css("top", scrollTop * 0.8 + "px");
+    });
+
+    
+    $(document).ready(function() {
+        $('.navbar-toggler').on('click', function() {
+            $('.navbar').toggleClass('navbar-open');
+        });
+    
+        
+        $('.navbar-nav a').on('click', function() {
+            $('.navbar-collapse').collapse('hide');
+            $('.navbar').removeClass('navbar-open');
+        });
+    });
+    
+});
+
+//Anno per copyright
+document.getElementById("year").textContent = new Date().getFullYear();
+
+//funzione per aprire T1 - inizializzata sopra
 function toggleT1() {
     const chiuso = document.getElementById('t1-chiuso');
     const aperto = document.getElementById('t1-aperto');
-    const testo = document.getElementById('text');
+
+    const zoomFactor = window.innerWidth >= 576 ? 1.5 : 2.0;
 
     if (!isAperto) {
-        // Apri
-        chiuso.style.opacity = '0';
-        chiuso.style.pointerEvents = 'none';
-
         aperto.style.opacity = '1';
         aperto.style.pointerEvents = 'auto';
 
         setTimeout(() => {
-            testo.classList.add('show');
-        }, 300);
+            chiuso.style.opacity = '0';
+            chiuso.style.pointerEvents = 'none';
+            aperto.style.transform = `scale(${zoomFactor})`; // Applica lo zoom in base alla larghezza
+        }, 400);
     } else {
-        // Chiudi
-        aperto.style.opacity = '0';
-        aperto.style.pointerEvents = 'none';
-
+        aperto.style.transition = 'transform 0.4s ease-in-out'; // Riabilita la transizione
+        aperto.style.transform = 'scale(1)'; // Ripristina la scala a 1
         chiuso.style.opacity = '1';
         chiuso.style.pointerEvents = 'auto';
 
-        testo.classList.remove('show');
+        setTimeout(() => {
+            aperto.style.opacity = '0';
+            aperto.style.pointerEvents = 'none';
+        }, 400);
     }
+
     isAperto = !isAperto;
 }
 
 
-const tipoSelect = document.getElementById('tipo');
-    const sezioni = {
-      sponsor: document.getElementById('sezioneSponsor'),
-      espositore: document.getElementById('sezioneEspositore'),
-      food: document.getElementById('sezioneFood'),
-      attivita: document.getElementById('sezioneAttivita'),
-      staff: document.getElementById('sezioneStaff'),
-    };
 
-    tipoSelect.addEventListener('change', function () {
-      Object.values(sezioni).forEach(sec => sec.classList.add('hidden'));
-      const scelta = tipoSelect.value;
-      if (sezioni[scelta]) {
-        sezioni[scelta].classList.remove('hidden');
-      }
-    });
 
-//Anno per copyright
-document.getElementById("year").textContent = new Date().getFullYear();
