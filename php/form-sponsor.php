@@ -1,8 +1,12 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 // Carica PHPMailer
-require 'PHPMailer/src/PHPMailer.php';
-require 'PHPMailer/src/SMTP.php';
-require 'PHPMailer/src/Exception.php';
+require 'phpmailer/src/PHPMailer.php';
+require 'phpmailer/src/SMTP.php';
+require 'phpmailer/src/Exception.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -48,14 +52,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Prepara il messaggio
     $body = "
-    <h2>Nuova richiesta di partecipazione all'evento</h2>
-    <p><strong>Tipo:</strong> $tipo</p>
-    <p><strong>Nome attività:</strong> $nome</p>
-    <p><strong>Email:</strong> $email</p>
-    <p><strong>Telefono:</strong> $telefono</p>
-    <p><strong>Sito/Social:</strong> $sito</p>
-    <p><strong>Dettagli specifici:</strong><br>$info</p>
-    <p><strong>Note aggiuntive:</strong><br>$note</p>
+    <h2>Nuova richiesta di partecipazione all'evento  <span>&#x2757;</span> <!-- ❗️ --></h2>
+    <p> <span>&#x1F3AF;</span> <!-- 🎯 --> <strong>Tipo:</strong> $tipo</p>
+    <p> <span>&#x1F3E2;</span> <!-- 🏢 --> <strong>Nome attivita':</strong> $nome</p>
+    <p> <span>&#x1F4E7;</span> <!-- 📧 --> <strong>Email:</strong> $email</p>
+    <p> <span>&#x1F4DE;</span> <!-- 📞 --> <strong>Telefono:</strong> $telefono</p>
+    <p> <span>&#x1F310;</span> <!-- 🌐 --> <strong>Sito/Social:</strong> $sito</p>
+    <p> <span>&#x1F4CB;</span> <!-- 📋 --> <strong>Dettagli specifici:</strong><br>$info</p>
+    <p> <span>&#x1F4AC;</span> <!-- 💬 --> <strong>Note aggiuntive:</strong><br>$note</p>
+    <p> </p>
+    <h4> Contenuto generato automaticamente dal modulo sponsorizzazione dell'evento Matese Volks Camp 2025 </h4>
     ";
 
     // Invia l'email con PHPMailer
@@ -64,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     try {
         // CONFIGURAZIONE SMTP 
         $mail->isSMTP();
-        $mail->Host = 'smtp.aruba.it';
+        $mail->Host = 'smtps.aruba.it';
         $mail->SMTPAuth = true;
         $mail->Username = 'support@soulvolks.it';
         $mail->Password = 'SV/modulo23';
@@ -73,6 +79,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Mittente e destinatario
         $mail->setFrom('support@soulvolks.it', 'Webmaster Soul Volks');
+        $mail->Username = 'support@soulvolks.it';
         $mail->addAddress('info@soulvolks.it'); // Indirizzo email destinatario
         $mail->addAddress('civico32alessandro@gmail.com'); // Indirizzo email destinatario aggiuntivo
         $mail->addReplyTo($email, $nome); // Rispondi all'indirizzo email dell'utente
@@ -86,9 +93,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         http_response_code(200);
         echo "Messaggio inviato con successo!";
+        $mail->SMTPDebug = 2;
+        $mail->Debugoutput = 'html';
+
     } catch (Exception $e) {
         http_response_code(500);
-        echo "Errore nell'invio: {$mail->ErrorInfo}";
+        echo "Errore nell'invio (PHPMailer): {$mail->ErrorInfo} \nEccezione: {$e->getMessage()}";
     }
 } else {
     http_response_code(405); // metodo non consentito

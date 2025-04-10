@@ -92,7 +92,7 @@ $(document).ready(function () {
             type: 'POST',
             data: $(this).serialize(),
             success: function (response) {
-                $('#moduloSponsor')[0].reset(); // resetta form
+                $('#partnerForm').trigger("reset");
                 alert("Messaggio inviato con successo!");
                 $('#messaggioConferma').removeClass('d-none');
             },
