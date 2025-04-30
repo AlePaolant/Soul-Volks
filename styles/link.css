@@ -1,0 +1,140 @@
+:root {
+    --bg-color: #fefbf6;
+    --text-color: #1e1e1e;
+    --accent: #6e1e2a;
+    /* bordeaux */
+    --btn-bg: #ffffff;
+    --btn-shadow: rgba(0, 0, 0, 0.1);
+    --hover-bg: #f0eaea;
+    --subtext: #777;
+    --retro-font: 'Press Start 2P', cursive;
+    --main-font: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--main-font);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.tagline {
+    padding-top: 6%;
+    font-family: var(--retro-font);
+    font-size: 0.75rem;
+    color: var(--text-color);
+    line-height: 2;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 450px;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.link-btn {
+    background: var(--btn-bg);
+    border: 2px solid var(--accent);
+    box-shadow: 0 2px 8px var(--btn-shadow);
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 10px;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.link-btn:hover {
+    background: var(--hover-bg);
+    transform: translateY(-2px);
+}
+
+.link-content {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    flex: 1;
+}
+
+.link-content img {
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.link-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-label {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.url-label {
+    font-size: 0.8rem;
+    color: var(--subtext);
+}
+
+.arrow {
+    font-size: 1.4rem;
+    color: var(--accent);
+    font-weight: bold;
+    margin-left: 1rem;
+}
+
+.home-logo-vw {
+    position: absolute;
+    width: 75%;
+    top: -15%;
+    left: 0%;
+    z-index: 0;
+    opacity: 5%;
+}
+
+@media (max-width: 500px) {
+    .main-label {
+        font-size: 0.95rem;
+    }
+
+    .url-label {
+        font-size: 0.7rem;
+    }
+    .home-logo-vw {
+        position: absolute;
+        width: 275%;
+        top: -35%;
+        left: -80%;
+        z-index: 0;
+        opacity: 5%;
+    }
+}
