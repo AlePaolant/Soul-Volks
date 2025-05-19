@@ -1,7 +1,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/AlePaolant/Soul-Volks">
-    <img src="frontend/public/images/logo-zmp-group-w-V2.png" alt="Logo" width="auto" height="80">
+    <img src="img/logo-footer.png" alt="Logo" width="auto" height="180">
   </a>
 
   <h2 align="center">SOUL VOLKS WEBSITE</h2>
