@@ -1,4 +1,17 @@
-# SOUL-VOLKS
+<br />
+<div align="center">
+  <a href="https://github.com/AlePaolant/Soul-Volks">
+    <img src="frontend/public/images/logo-zmp-group-w-V2.png" alt="Logo" width="auto" height="80">
+  </a>
+
+  <h2 align="center">SOUL VOLKS WEBSITE</h2>
+
+  <p align="center">
+    Sito web creato da Alessandro Paolantonio per SOUL VOLKS
+    <br />
+    <a href="https://www.soulvolks.it"><strong>Guarda il sito »</strong></a>
+  </p>
+</div>
 
 Questo repository contiene il codice del sito SOUL VOLKS.
 Di proprietà di Alessandro Paolantonio.
@@ -26,72 +39,32 @@ Di proprietà di Alessandro Paolantonio.
   - **Bugs Weekend 2024**
 - **Cookie, Privacy e Termini** (pagina con le leggi sui cookie, privacy, e termini vari)
 
+- **Link:** pagina separata non indicizzata che funziona un po' come linktree: unico posto con tutti i link importanti.
 
-## Tecnologie Utilizzate
 
-- **HTML:** 
-- **CSS:**
-- **Bootstrap:** 
-- **Jquery:** 
-- **php:** 
+## 🛠 Tecnologie Utilizzate
 
-## Utilizzo
-- **Accedi al frontend su http://localhost:3000**
-- **Accedi al backend su http://localhost:8000/admin**
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white) ![jQuery](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white) ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+
+## Sviluppo
+- **Frontend su http://localhost:3000**
+- **Backend su http://localhost:8000/admin**
 
 ## Strumenti analisi e revisione
 - **Google Search Console**
-  - Verifica errori di indicizzazione (pagine non trovate, errori 404)
-  - Controlla i core web vitals (Largest Contentful Paint, First input Delay, Cumulative Layout Shift)
-  - Analizza le query di ricerca che portano traffico al sito
-  - Verifica lo stato dei sitemap xml
 - **Google Page Speed Insights**
-  - Testa la velocità di caricamento del sito su desktop e mobile
-  - Ottieni suggerimenti per migliorare le prestazioni (image, cache, css/js)
-- **GTmetrix o Pingdom**
-  - Analisi approfondita delle prestazioni del sito, con suggerimenti specifici per ottimizzare la velocità
-- **Mobile-Friendly Test**
-  - Verifica se il sito è ottimizzato per dispositivi mobili
 - **SSL Checker**
-  - Verifica che il certificato SSL sia installato correttamente e che il sito sia accessibile tramite HTTPS
-  - (Sucuri SiteCheck: scansiona il sito per malware, vulnerabilità e problemi di sicurezza)
-
-- **Screaming Frog SEO o Ahrefs**
-  - Analisi di tutte le pagine per verificare se hanno titoli / descrizioni unici e ottimizzati per le parole chiave
-  - Controllo che tutte le pagine siano collegate tramite link interni pertinenti
+- **Screaming Frog SEO**
 - **Surfer SEO**
-  - Analisi della densità delle parole seo. Contenuto di alta qualità, originale e utile per gli utenti
-- **Consigli utili**
-  - tutte le immagini con attributo alt
-  - url brevi e descrittivi che includano parole chiave
 
 - **Google Rich Results Test**
-  - Verifica se i schema markup sono implementati correttamente.
-- **Schema markup generator - Schema.org - TechnicalSEO.com**
-  - Crea e implementa snippet di codice per migliorare la visibilità nei risultati di ricerca
+- **Schema markup generator - Schema.org - TechnicalSEO**
 
-- **Analisi dei Backlink**
-  - ***Ahrefs o SEMRush***
-    - Analizza il profilo backlink del tuo sito per identificare link di qualità e link tossici
-    - Trova l'opportunità per acquisire nuovi backlink da siti autorevoli
 
-- **Google keyword planner**
-  - Trova delle nuove parole chiave per l'evento/il sito
-- **Ubersuggest**
-  - Analizza il posizionamento attuale delle parole chiave e identifica opportunità di miglioramento
-- **Google Trends**
-  - Verifica la popolarità delle parole chiave nel tempo
+# Licenza
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-- **Hotjar o Crazy Egg**
-  - analisi del comportamento utenti, registrazione delle sessioni
+## Contatti:
+Alessandro Paolantonio  - [alexpaolantonio@gmail.com](mailto:alexpaolantonio@gmail.com) -  [+39 327 4309080](tel:+393274309080)
 
-- **Facebook Sharing Debugger**
-- **Twitter Card Validator**
-
-- **Web.dev**
-  - suggerimenti dettagliati per migliorare le prestaizoni del sito
-
-- **Google Alerts**
-  - Imposta alert per il nome del tuo evento o brand per monitorare menzioni online 
-- **Rank Tracking**
-  - Monitora il posizionamento delle parole chiave nel tempo
+Project Link: [https://github.com/AlePaolant/Soul-Volks](https://github.com/AlePaolant/Soul-Volks)
