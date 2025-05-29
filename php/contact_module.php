@@ -25,10 +25,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         try {
             // Configurazione del server SMTP
             $mail->isSMTP();
-            $mail->Host       = 'smtps.aruba.it';
+            $mail->Host       = ''; // Sostituisci in deployment
             $mail->SMTPAuth   = true;
-            $mail->Username   = 'support@soulvolks.it'; // Sostituisci con il tuo indirizzo email
-            $mail->Password   = 'SV/modulo23'; // Sostituisci con la tua password
+            $mail->Username   = ''; // Sostituisci in deployment
+            $mail->Password   = ''; //Sostituisci in deployment
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // Abilita TLS
             $mail->Port       = 465; // Porta SMTP
 
