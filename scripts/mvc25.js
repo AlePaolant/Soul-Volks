@@ -54,6 +54,19 @@ function toggleT1() {
     isAperto = !isAperto;
 }
 
+// Funzione toggle modulo
+document.getElementById("apriModuloBtn").addEventListener("click", function () {
+    document.getElementById("contenitoreModulo").classList.remove("d-none");
+    this.style.display = "none";
+});
+document.getElementById("chiudiModuloBtn").addEventListener("click", function () {
+    document.getElementById("contenitoreModulo").classList.add("d-none");
+    document.getElementById("apriModuloBtn").style.display = "inline-block";
+});
+
+
+
+
 // jQuery: tutto dentro un unico document.ready
 $(document).ready(function () {
 

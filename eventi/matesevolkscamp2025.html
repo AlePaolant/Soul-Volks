@@ -2,7 +2,7 @@
 <html lang="it">
 
 <head>
-    <title>Matese Volks Camp</title>
+    <title>Matese Volks Camp 2025</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Codice Schema.org -->
@@ -238,24 +238,61 @@
         </div>
     </section>
 
+    <!-- SEZIONE PROGRAMMA V2 -->
+    <section class="programma text-center pb-5">
+        <h1 class="mb-4">Programma (in aggiornamento)</h1>
+
+        <div class="timeline-container">
+            <div class="timeline-line" id="timelineLine">
+                <div class="dot" style="left: 5%;" data-day="0">8</div>
+                <div class="dot" style="left: 35%;" data-day="1">9</div>
+                <div class="dot" style="left: 65%;" data-day="2">10</div>
+                <div class="dot" style="left: 95%;" data-day="3">11</div>
+                <img src="../img/events/mvc-25/T1-DOTS.png" alt="Pulmino" id="bus" draggable="false" />
+            </div>
+
+
+            <div id="programmaContent" class="programma-content mt-4">
+                <!-- Qui appare il programma del giorno -->
+            </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
     <!-- SEZIONE SPONSOR -->
     <section class="sponsor" id="sponsor">
         <div class="container text-center mb-5">
             <h1 class="mb-3">Unisciti a noi!</h1>
-            <p class="lead">Dai il tuo contributo al nostro evento 2025! Compila il modulo e raccontaci la tua idea!</p>
+            <p class="lead">Dai il tuo contributo al nostro evento 2025! Raccontaci la tua idea!</p>
+            <button id="apriModuloBtn" class="btn btn-lg mt-3">Compila il modulo</button>
         </div>
 
-        <div class="container">
+        <div class="container d-none" id="contenitoreModulo">
             <div class="row g-5">
                 <div class="col-md-6 descrizioni">
                     <h4>Chi stiamo cercando?</h4>
                     <ul class="list-unstyled">
-                        <li><strong>Sponsor</strong>: Promuovi il tuo brand: offriamo visibilità su materiali, social e spazi dedicati. Scrivici cosa hai in mente!</li>
-                        <li><strong>Espositori</strong>: Hai un’attività artigianale o creativa? Puoi partecipare con uno stand o un banchetto per mostrare e vendere i tuoi prodotti.</li>
-                        <li><strong>Food Truck & Street Food</strong>: Gestisci un food truck, chiosco o cucini street food? Dicci che tipo di cucina offri e se hai esigenze particolari.</li>
-                        <li><strong>Workshop / Attività</strong>: Vuoi proporre un’attività, un laboratorio, qualcosa di originale? Sport, musica, giochi… siamo curiosi di saperne di più!</li>
-                        <li><strong>Staff / Volontari</strong>: Logistica, accoglienza, supporto generale: ogni mano è preziosa, anche solo per qualche ora.</li>                    </ul>
-                    <p>Compila il modulo per farci sapere come vuoi partecipare. Sarai ricontattato il prima possibile!</p>
+                        <li><strong>Sponsor</strong>: Promuovi il tuo brand: offriamo visibilità su materiali, social e
+                            spazi dedicati. Scrivici cosa hai in mente!</li>
+                        <li><strong>Espositori</strong>: Hai un’attività artigianale o creativa? Puoi partecipare con
+                            uno stand o un banchetto per mostrare e vendere i tuoi prodotti.</li>
+                        <li><strong>Food Truck & Street Food</strong>: Gestisci un food truck, chiosco o cucini street
+                            food? Dicci che tipo di cucina offri e se hai esigenze particolari.</li>
+                        <li><strong>Workshop / Attività</strong>: Vuoi proporre un’attività, un laboratorio, qualcosa di
+                            originale? Sport, musica, giochi… siamo curiosi di saperne di più!</li>
+                        <li><strong>Staff / Volontari</strong>: Logistica, accoglienza, supporto generale: ogni mano è
+                            preziosa, anche solo per qualche ora.</li>
+                    </ul>
+                    <p>Compila il modulo per farci sapere come vuoi partecipare. Sarai ricontattato il prima possibile!
+                    </p>
                 </div>
 
                 <div class="col-md-6">
@@ -286,8 +323,8 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-6 mb-3">
-                                  <label class="form-label">Telefono</label>
-                                  <input type="tel" class="form-control" name="telefono">
+                                    <label class="form-label">Telefono</label>
+                                    <input type="tel" class="form-control" name="telefono">
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label class="form-label">Sito web o social (opzionale)</label>
@@ -352,6 +389,7 @@
                     </div>
                 </div>
             </div>
+            <button type="button" id="chiudiModuloBtn" class="btn mt-5 w-100">Chiudi modulo</button>
         </div>
     </section>
 
@@ -376,7 +414,7 @@
             <img src="sponsor/logo15.png" alt="Sponsor 15">
             <img src="sponsor/logo16.png" alt="Sponsor 16">
             -->
-          </div>
+        </div>
     </section>
     <!--FOOTER -->
     <footer class="footer">
@@ -469,6 +507,7 @@
     <!-- SCRIPT GENERALE RIMOSSO PER FACILITARE SCROLL -->
     <!-- <script src="../scripts/general.js"></script> -->
     <script src="../scripts/mvc25.js"></script>
+    <script src="../scripts/mvc25-programm.js"></script>
 </body>
 
 </html>

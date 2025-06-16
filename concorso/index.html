@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concorso Fotografico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Concorso Fotografico 2025</h1>
+            <p>Partecipa con le tue migliori foto e vinci!</p>
+            <button id="startFormBtn">Partecipa al concorso</button>
+        </div>
+    </section>
+
+    <!-- Regolamento -->
+    <section class="regolamento" id="regolamento">
+        <h2>Regolamento</h2>
+        <p>Inserisci qui il regolamento del concorso fotografico...</p>
+    </section>
+
+    <!-- Form Step-by-Step -->
+    <section class="form-wrapper" id="formWrapper">
+        <form id="concorsoForm" action="submit.php" method="POST" enctype="multipart/form-data">
+            <!-- Step 1: Dati Personali -->
+            <div class="form-step active" data-step="1">
+                <h3>Dati personali</h3>
+                <input type="text" name="nome" placeholder="Nome" required>
+                <input type="text" name="cognome" placeholder="Cognome" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="tel" name="telefono" placeholder="Telefono" required>
+                <button type="button" class="next">Avanti</button>
+            </div>
+
+            <!-- Step 2: Upload Foto -->
+            <div class="form-step" data-step="2">
+                <h3>Carica le tue foto</h3>
+                <div class="foto-upload">
+                    <!-- Ripeti per 4 foto -->
+                    <div class="foto-field">
+                        <input type="text" name="titolo1" placeholder="Titolo foto 1" required>
+                        <input type="file" name="foto1" accept="image/*" required>
+                    </div>
+                    <div class="foto-field">
+                        <input type="text" name="titolo2" placeholder="Titolo foto 2" required>
+                        <input type="file" name="foto2" accept="image/*" required>
+                    </div>
+                    <div class="foto-field">
+                        <input type="text" name="titolo3" placeholder="Titolo foto 3" required>
+                        <input type="file" name="foto3" accept="image/*" required>
+                    </div>
+                    <div class="foto-field">
+                        <input type="text" name="titolo4" placeholder="Titolo foto 4" required>
+                        <input type="file" name="foto4" accept="image/*" required>
+                    </div>
+                </div>
+                <button type="button" class="prev">Indietro</button>
+                <button type="button" class="next">Avanti</button>
+            </div>
+
+            <!-- Step 3: PDF Bonifico -->
+            <div class="form-step" data-step="3">
+                <h3>Carica la ricevuta del bonifico</h3>
+                <input type="file" name="bonifico" accept="application/pdf" required>
+                <button type="button" class="prev">Indietro</button>
+                <button type="button" class="next">Avanti</button>
+            </div>
+
+            <!-- Step 4: Consensi -->
+            <div class="form-step" data-step="4">
+                <h3>Consensi</h3>
+                <label><input type="checkbox" name="privacy" required> Accetto la privacy</label>
+                <label><input type="checkbox" name="regolamento" required> Accetto il regolamento</label>
+                <label><input type="checkbox" name="utilizzo" required> Acconsento all'uso delle foto</label>
+                <!-- Captcha placeholder -->
+                <div class="captcha-placeholder">[CAPTCHA QUI]</div>
+                <button type="button" class="prev">Indietro</button>
+                <button type="submit">Invia iscrizione</button>
+            </div>
+
+            <!-- Step 5: Conferma -->
+            <div class="form-step" data-step="5">
+                <h3>Grazie per l'iscrizione!</h3>
+                <p>Ti abbiamo inviato un'email di conferma.</p>
+            </div>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Associazione Fotografica</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
