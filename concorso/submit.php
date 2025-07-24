@@ -9,6 +9,13 @@ function slugify($string) {
   return trim($string, '-');
 }
 
+$id = uniqid();
+$folderName = slugify("{$nome}_{$cognome}_{$id}");
+$userDir = "$baseDir/$folderName";
+if (!file_exists($userDir)) {
+    mkdir($userDir, 0777, true);
+}
+
 // Dati del form
 $nome = $_POST['nome'] ?? '';
 $cognome = $_POST['cognome'] ?? '';
@@ -43,6 +50,11 @@ for ($i = 0; $i < 4; $i++) {
     $ext = pathinfo($_FILES[$fotoKey]['name'], PATHINFO_EXTENSION);
     $filename = slugify($titoli[$i]) . '.' . $ext;
     move_uploaded_file($tmpName, "$userDir/$filename");
+    $finfo = finfo_open(FILEINFO_MIME_TYPE);
+$mime = finfo_file($finfo, $tmpName);
+if ($mime !== 'image/jpeg') {
+    continue; // Skippa se non è jpg
+}
   }
 }
 
@@ -57,10 +69,16 @@ if (isset($_FILES['bonifico']) && $_FILES['bonifico']['error'] === UPLOAD_ERR_OK
 // Aggiornamento CSV
 $csvFile = __DIR__ . '/iscrizioni.csv';
 $csvRow = [
+  $id,
   $nome,
   $cognome,
   $email,
   $telefono,
+  $titoli[0],
+  $titoli[1],
+  $titoli[2],
+  $titoli[3],
+  'bonifico.pdf',
   date('Y-m-d H:i:s')
 ];
 $fp = fopen($csvFile, 'a');
@@ -70,3 +88,10 @@ fclose($fp);
 // Redirect o messaggio finale (o risposta JSON se AJAX)
 header('Location: index.html?success=1');
 exit;
+
+
+// Telegram Notify
+$botToken = 'TUO_TOKEN';
+$chatId = 'TUO_CHAT_ID';
+$message = "📸 Nuovo iscritto: $nome $cognome\nEmail: $email\nFoto caricate: " . count(array_filter($titoli));
+file_get_contents("https://api.telegram.org/bot$botToken/sendMessage?chat_id=$chatId&text=" . urlencode($message));

@@ -82,3 +82,7 @@ footer {
     text-align: center;
     margin-top: 1rem;
 }
+
+input.error {
+    border: 2px solid red;
+}

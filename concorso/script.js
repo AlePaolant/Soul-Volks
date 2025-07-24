@@ -18,9 +18,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
     form.querySelectorAll(".next").forEach(btn => {
         btn.addEventListener("click", () => {
-            if (currentStep < steps.length - 1) {
+            const currentStepEl = steps[currentStep];
+            const inputs = currentStepEl.querySelectorAll("input[required]");
+            let valid = true;
+
+            inputs.forEach(input => {
+                if (!input.value || (input.type === "file" && input.files.length === 0)) {
+                    valid = false;
+                    input.classList.add("error");
+                } else {
+                    input.classList.remove("error");
+                }
+            });
+
+            if (valid) {
                 currentStep++;
                 showStep(currentStep);
+            } else {
+                alert("Compila tutti i campi obbligatori prima di proseguire.");
             }
         });
     });
@@ -35,10 +50,18 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     form.addEventListener("submit", (e) => {
-        // Qui in futuro si potrà aggiungere la logica per AJAX o form validation server-side
-        showStep(steps.length - 1);
+    const bonificoInput = form.querySelector('input[name="bonifico"]');
+    if (!bonificoInput || bonificoInput.files.length === 0) {
         e.preventDefault();
-    });
+        alert("Devi caricare la ricevuta del bonifico in formato PDF.");
+        bonificoInput.classList.add("error");
+        return;
+    }
+    bonificoInput.classList.remove("error");
+
+    // Se tutto va bene, mostra conferma e lascia che PHP gestisca
+    showStep(steps.length - 1);
+});
 
     showStep(currentStep);
 });
