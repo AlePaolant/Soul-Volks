@@ -1,97 +1,131 @@
 <?php
-// submit.php
+header('Content-Type: application/json');
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 
-// Utility per rendere "safe" i nomi file/cartella
 function slugify($string) {
-  $string = strtolower(trim($string));
-  $string = preg_replace('/[^a-z0-9-]/', '-', $string);
-  $string = preg_replace('/-+/', '-', $string);
-  return trim($string, '-');
+    $string = strtolower(trim($string));
+    $string = preg_replace('/[^a-z0-9-]/', '-', $string);
+    $string = preg_replace('/-+/', '-', $string);
+    return trim($string, '-');
 }
 
-$id = uniqid();
-$folderName = slugify("{$nome}_{$cognome}_{$id}");
-$userDir = "$baseDir/$folderName";
-if (!file_exists($userDir)) {
-    mkdir($userDir, 0777, true);
+$requiredFields = ['nome', 'cognome', 'email', 'telefono', 'privacy', 'regolamento', 'utilizzo'];
+foreach ($requiredFields as $field) {
+    if (empty($_POST[$field])) {
+        echo json_encode(["success" => false, "message" => "Campo mancante: $field"]);
+        exit;
+    }
 }
 
-// Dati del form
-$nome = $_POST['nome'] ?? '';
-$cognome = $_POST['cognome'] ?? '';
-$email = $_POST['email'] ?? '';
-$telefono = $_POST['telefono'] ?? '';
+// Bonifico obbligatorio
+if (!isset($_FILES['bonifico']) || $_FILES['bonifico']['error'] !== UPLOAD_ERR_OK) {
+    echo json_encode(["success" => false, "message" => "PDF del bonifico mancante o non valido"]);
+    exit;
+}
+$bonificoMime = mime_content_type($_FILES['bonifico']['tmp_name']);
+if ($bonificoMime !== 'application/pdf') {
+    echo json_encode(["success" => false, "message" => "Il file del bonifico deve essere un PDF"]);
+    exit;
+}
 
-$titoli = [
-  $_POST['titolo1'] ?? '',
-  $_POST['titolo2'] ?? '',
-  $_POST['titolo3'] ?? '',
-  $_POST['titolo4'] ?? ''
-];
+// Foto
+$titoli = [];
+$titoliSet = [];
+for ($i = 1; $i <= 4; $i++) {
+    $titolo = trim($_POST["titolo$i"] ?? '');
+    $file = $_FILES["foto$i"] ?? null;
 
-// Cartella principale per gli upload
+    if ($file && $file['error'] === UPLOAD_ERR_OK) {
+        if ($titolo === '') $titolo = "senza titolo $i";
+
+        if (in_array(strtolower($titolo), $titoliSet)) {
+            echo json_encode(["success" => false, "message" => "Titoli duplicati: \"$titolo\""]);
+            exit;
+        }
+        $titoliSet[] = strtolower($titolo);
+
+        if (mime_content_type($file['tmp_name']) !== 'image/jpeg') {
+            echo json_encode(["success" => false, "message" => "La foto $i non è un JPEG valido"]);
+            exit;
+        }
+
+        if ($file['size'] > 10 * 1024 * 1024) {
+            echo json_encode(["success" => false, "message" => "La foto $i supera i 10MB"]);
+            exit;
+        }
+
+        $titoli[] = [
+            "titolo" => $titolo,
+            "file" => $file
+        ];
+    }
+}
+
+if (count($titoli) === 0) {
+    echo json_encode(["success" => false, "message" => "Devi caricare almeno una foto"]);
+    exit;
+}
+if (count($titoli) > 4) {
+    echo json_encode(["success" => false, "message" => "Massimo 4 foto consentite"]);
+    exit;
+}
+
+// Salvataggio
 $baseDir = __DIR__ . '/uploads';
-if (!file_exists($baseDir)) {
-  mkdir($baseDir, 0777, true);
-}
-
-// Cartella specifica del partecipante
-$folderName = slugify($nome . '-' . $cognome);
+if (!file_exists($baseDir)) mkdir($baseDir, 0777, true);
+$id = uniqid();
+$folderName = slugify("{$_POST['nome']}_{$_POST['cognome']}_$id");
 $userDir = "$baseDir/$folderName";
-if (!file_exists($userDir)) {
-  mkdir($userDir, 0777, true);
+if (!mkdir($userDir, 0777, true)) {
+    echo json_encode(["success" => false, "message" => "Errore nella creazione della cartella utente"]);
+    exit;
 }
 
-// Gestione upload delle foto
-for ($i = 0; $i < 4; $i++) {
-  $fotoKey = 'foto' . ($i + 1);
-  if (isset($_FILES[$fotoKey]) && $_FILES[$fotoKey]['error'] === UPLOAD_ERR_OK) {
-    $tmpName = $_FILES[$fotoKey]['tmp_name'];
-    $ext = pathinfo($_FILES[$fotoKey]['name'], PATHINFO_EXTENSION);
-    $filename = slugify($titoli[$i]) . '.' . $ext;
-    move_uploaded_file($tmpName, "$userDir/$filename");
-    $finfo = finfo_open(FILEINFO_MIME_TYPE);
-$mime = finfo_file($finfo, $tmpName);
-if ($mime !== 'image/jpeg') {
-    continue; // Skippa se non è jpg
-}
-  }
+// Salva foto
+foreach ($titoli as $data) {
+    $file = $data['file'];
+    $titleSlug = slugify($data['titolo']);
+    $targetPath = "$userDir/$titleSlug.jpg";
+    if (!move_uploaded_file($file['tmp_name'], $targetPath)) {
+        echo json_encode(["success" => false, "message" => "Errore nel salvataggio di una foto"]);
+        exit;
+    }
 }
 
-// Gestione PDF bonifico
-if (isset($_FILES['bonifico']) && $_FILES['bonifico']['error'] === UPLOAD_ERR_OK) {
-  $ext = pathinfo($_FILES['bonifico']['name'], PATHINFO_EXTENSION);
-  if (strtolower($ext) === 'pdf') {
-    move_uploaded_file($_FILES['bonifico']['tmp_name'], "$userDir/bonifico.pdf");
-  }
+// Salva bonifico
+if (!move_uploaded_file($_FILES['bonifico']['tmp_name'], "$userDir/bonifico.pdf")) {
+    echo json_encode(["success" => false, "message" => "Errore nel salvataggio del bonifico"]);
+    exit;
 }
 
-// Aggiornamento CSV
-$csvFile = __DIR__ . '/iscrizioni.csv';
+// CSV
+$csvPath = __DIR__ . '/iscrizioni.csv';
+$writeHeader = !file_exists($csvPath);
 $csvRow = [
-  $id,
-  $nome,
-  $cognome,
-  $email,
-  $telefono,
-  $titoli[0],
-  $titoli[1],
-  $titoli[2],
-  $titoli[3],
-  'bonifico.pdf',
-  date('Y-m-d H:i:s')
+    $id,
+    $_POST['nome'],
+    $_POST['cognome'],
+    $_POST['email'],
+    $_POST['telefono'],
+    $titoli[0]['titolo'] ?? '',
+    $titoli[1]['titolo'] ?? '',
+    $titoli[2]['titolo'] ?? '',
+    $titoli[3]['titolo'] ?? '',
+    'bonifico.pdf',
+    date('Y-m-d H:i:s')
 ];
-$fp = fopen($csvFile, 'a');
-fputcsv($fp, $csvRow);
-fclose($fp);
+$fp = fopen($csvPath, 'a');
+if ($fp) {
+    if ($writeHeader) {
+        fputcsv($fp, ['id', 'nome', 'cognome', 'email', 'telefono', 'titolo1', 'titolo2', 'titolo3', 'titolo4', 'bonifico', 'data']);
+    }
+    fputcsv($fp, $csvRow);
+    fclose($fp);
+} else {
+    echo json_encode(["success" => false, "message" => "Errore nella scrittura del CSV"]);
+    exit;
+}
 
-// Redirect o messaggio finale (o risposta JSON se AJAX)
-header('Location: index.html?success=1');
-exit;
-
-
-// Telegram Notify
-$botToken = 'TUO_TOKEN';
-$chatId = 'TUO_CHAT_ID';
-$message = "📸 Nuovo iscritto: $nome $cognome\nEmail: $email\nFoto caricate: " . count(array_filter($titoli));
-file_get_contents("https://api.telegram.org/bot$botToken/sendMessage?chat_id=$chatId&text=" . urlencode($message));
+@include 'telegram.php';
+echo json_encode(["success" => true]);
