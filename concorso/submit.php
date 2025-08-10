@@ -126,6 +126,65 @@ if ($fp) {
     echo json_encode(["success" => false, "message" => "Errore nella scrittura del CSV"]);
     exit;
 }
+// --- TELEGRAM ---
 
-@include 'telegram.php';
+$telegramToken = '7730776381:AAG1kvBlS1lCblk3bnkOTWa548bHRh_vFA8';
+$telegramChatId = '120414788';
+
+function sendTelegram($token, $chatId, $text) {
+    $ch = curl_init("https://api.telegram.org/bot{$token}/sendMessage");
+    $fields = [
+        'chat_id' => $chatId,
+        'text' => $text,
+        'disable_web_page_preview' => true,
+        // 'parse_mode' => 'HTML', // se vuoi grassetti/nuove righe gestite da <br>, ecc.
+    ];
+    curl_setopt_array($ch, [
+        CURLOPT_POST => true,
+        CURLOPT_POSTFIELDS => $fields,
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_CONNECTTIMEOUT => 10,
+        CURLOPT_TIMEOUT => 15,
+    ]);
+
+    $response = curl_exec($ch);
+    $err = curl_error($ch);
+    $http = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    curl_close($ch);
+
+    $ok = false;
+    $respArr = $response ? json_decode($response, true) : null;
+    if ($http === 200 && is_array($respArr) && isset($respArr['ok'])) {
+        $ok = $respArr['ok'] === true;
+    }
+
+    $logLine = date('c') . " TG send: HTTP=$http ERR=" . ($err ?: 'none') . " RESP=$response\n";
+    file_put_contents(__DIR__ . '/telegram.log', $logLine, FILE_APPEND);
+
+    return $ok;
+}
+
+// Prepara messaggio
+$fotoCount = count($titoli);
+$righe = 0;
+if (file_exists($csvPath)) {
+    $count = count(file($csvPath));
+    $righe = max(0, $count - 1); // togli intestazione se presente
+}
+
+$msg = "📸 Nuova iscrizione\n"
+     . "👤 {$_POST['nome']} {$_POST['cognome']}\n"
+     . "📧 {$_POST['email']}\n"
+     . "🖼️ Foto caricate: $fotoCount\n"
+     . "📄 Bonifico: ✅\n"
+     . "📊 Totale iscrizioni: $righe";
+
+if ($telegramToken && $telegramChatId) {
+    $ok = sendTelegram($telegramToken, $telegramChatId, $msg);
+    // opzionale: se vuoi che il fallimento Telegram NON blocchi l'utente:
+    // if (!$ok) { /* puoi anche solo loggare, senza interrompere */ }
+} else {
+    file_put_contents(__DIR__ . '/telegram.log', date('c')." Missing Telegram env vars\n", FILE_APPEND);
+}
+
 echo json_encode(["success" => true]);
